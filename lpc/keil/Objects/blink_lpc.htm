@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\blink_lpc.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\blink_lpc.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Dec 02 22:37:54 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Dec 03 00:34:45 2025
 <BR><P>
 <H3>Maximum Stack Usage =        120 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -313,7 +313,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> hal_tiempo_lpc.o(i.hal_tiempo_iniciar_tick)
 </UL>
-<P><STRONG><a name="[d]"></a>beat_hero_actualizar</STRONG> (ARM, 1376 bytes, Stack size 32 bytes, beat_hero.o(i.beat_hero_actualizar))
+<P><STRONG><a name="[d]"></a>beat_hero_actualizar</STRONG> (ARM, 1388 bytes, Stack size 32 bytes, beat_hero.o(i.beat_hero_actualizar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = beat_hero_actualizar &rArr; finalizar_partida &rArr; svc_alarma_activar
 </UL>
@@ -499,7 +499,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3b]"></a>drv_tiempo_actual_us</STRONG> (ARM, 76 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
+<P><STRONG><a name="[3b]"></a>drv_tiempo_actual_us</STRONG> (ARM, 68 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = drv_tiempo_actual_us &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_actual_tick64
@@ -518,8 +518,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[65]"></a>drv_tiempo_periodico_ms</STRONG> (ARM, 104 bytes, Stack size 16 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
+<P><STRONG><a name="[65]"></a>drv_tiempo_periodico_ms</STRONG> (ARM, 64 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_reloj_periodico_tick
 </UL>
