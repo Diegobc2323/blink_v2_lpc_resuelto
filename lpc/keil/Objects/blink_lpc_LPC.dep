@@ -151,7 +151,7 @@ I (..\..\src\drv_aleatorios.h)(0x692DD9A1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\hal_aleatorios.h)(0x692DD9A1)
 F (..\..\src\drv_aleatorios.h)(0x692DD9A1)()
-F (..\..\src\beat_hero.c)(0x69288F9F)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
+F (..\..\src\beat_hero.c)(0x692EEA72)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
 I (..\..\src\beat_hero.h)(0x6925E4D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\rt_evento_t.h)(0x691F67DB)
@@ -159,6 +159,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
 I (..\..\src\drv_tiempo.h)(0x691F4FE1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F3DAC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F3DAC)
 I (..\..\src\board.h)(0x691F4FE1)
 I (../src_lpc/board_lpc.h)(0x691F4FE0)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)

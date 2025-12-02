@@ -6,6 +6,7 @@
 .\objects\beat_hero.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\beat_hero.o: ..\..\src\drv_tiempo.h
 .\objects\beat_hero.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\beat_hero.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\beat_hero.o: ..\..\src\board.h
 .\objects\beat_hero.o: ../src_nrf/board_nrf52840dk.h
 .\objects\beat_hero.o: ..\..\src\rt_GE.h

@@ -187,52 +187,27 @@ void beat_hero_actualizar(EVENTO_T evento, uint32_t auxData) {
                 s_estado = e_INIT;
                 svc_alarma_activar(svc_alarma_codificar(false, 500, ID_ALARMA_DEMO), ev_JUEGO_NUEVO_LED, ID_ALARMA_DEMO);
             }
+            break;
+            
+        default: break;
+    }
+}
+
+static void finalizar_partida(bool exito) {
+    // Aseguramos cancelar el Tick del juego para que no interfiera en e_RESULTADO
+    svc_alarma_activar(0, ev_JUEGO_NUEVO_LED, ID_ALARMA_TICK);
+    
+    s_estado = e_RESULTADO;
+    
+    for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_OFF);
+    
+    if (exito) {
+        for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_ON);
         if (s_score > s_high_score) {
             s_high_score = s_score;
             juego_stats.HighScore = s_high_score;
         }
     } else {
-        drv_led_establecer(1, LED_ON);
-        drv_led_establecer(4, LED_ON);
-    }
-}
-
-static void reiniciar_variables_juego(void) {
-    // Guardamos HighScore para no perderlo al limpiar
-    int32_t saved_high = juego_stats.HighScore;
-    
-    // 1. Limpieza total de la estructura
-    memset((void*)&juego_stats, 0, sizeof(BeatHeroStats_t));
-    
-    // 2. Restauramos HighScore
-    juego_stats.HighScore = saved_high;
-    
-    // 3. Forzamos explícitamente a 0 las variables solicitadas (redundante con memset pero seguro)
-    juego_stats.Score = 0;
-    juego_stats.NotasAcertadas = 0;
-    juego_stats.NotasFalladas = 0;
-    juego_stats.UltimoTiempoReaccion_ms = 0;
-    juego_stats.PromedioReaccion_ms = 0;
-    juego_stats.SumaTiemposReaccion = 0;
-    
-    // 4. Reinicio variables de control
-    juego_stats.Nivel = 1;
-    s_score = 0; 
-    s_compases_jugados = 0; 
-    s_nivel_dificultad = 1; 
-    s_duracion_compas_ms = 1000;
-    compas[0]=0; compas[1]=0; compas[2]=0;
-    
-    for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_OFF);
-    
-    // Cancelamos alarma de reset por si acaso quedó pendiente
-    svc_alarma_activar(0, ev_JUEGO_TIMEOUT, ID_ALARMA_RESET);
-}
-
-static void avanzar_compas(void) {
-    // STATS: Detectar nota perdida (Miss)
-    if (compas[0] != 0) {
-        juego_stats.NotasFalladas++;
         juego_stats.ComboActual = 0;
     }
 
