@@ -19,5 +19,4 @@
 .\objects\main.o: ../src_lpc/reserva_gpio_lpc2105.h
 .\objects\main.o: ..\..\src\drv_aleatorios.h
 .\objects\main.o: ..\..\src\beat_hero.h
-.\objects\main.o: ..\..\src\app_jugar.h
 .\objects\main.o: ..\..\src\drv_sonido.h

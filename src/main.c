@@ -13,7 +13,7 @@
 #include "board.h"
 #include "drv_aleatorios.h" 
 #include "beat_hero.h"
-#include "app_jugar.h"//eliminarlo 
+
 
 #include "drv_sonido.h"
 
@@ -47,7 +47,7 @@ static bool btn_states[BUTTONS_NUMBER] = {false};
 //}
 
 int main(void){
-    // 1. Inicializaciones de Hardware básico
+    // Inicializaciones de Hardware básico
     drv_tiempo_iniciar(); 
     hal_gpio_iniciar(); 
 	  drv_consumo_iniciar(4); 
@@ -55,26 +55,21 @@ int main(void){
 		drv_sonido_iniciar();
     drv_leds_iniciar();
   
-    // 2. Inicializaciones del Sistema (Runtime)
-    // IMPORTANTE: rt_GE_iniciar DEBE ir antes de cualquier driver que use suscripciones
+    // Inicializaciones del Sistema (Runtime)
     rt_FIFO_inicializar(1); // Monitor ID 2
-    rt_GE_iniciar(3);       // Monitor ID 3 <--- MOVIDO AQUÍ
+    rt_GE_iniciar(3);       // Monitor ID 3
     
-    // 3. Inicializaciones de Servicios y Drivers (que usan rt_GE)
-    svc_alarma_iniciar(4, rt_FIFO_encolar, ev_T_PERIODICO); // Monitor ID 4
+    // Inicializaciones de Servicios y Drivers (que usan rt_GE)
+    svc_alarma_iniciar(2, rt_FIFO_encolar, ev_T_PERIODICO); // Monitor ID 2
     
     // Iniciar Botones AHORA, después de que el GE esté listo
     drv_botones_iniciar(rt_FIFO_encolar, ev_PULSAR_BOTON, ev_SOLTAR_BOTON, ev_BOTON_TIMER);
   
-    // 4. Suscripciones de la Aplicación
     
-		// Driver de Aleatorios (NUEVO)
+		// Driver de Aleatorios
     // La semilla se ignora en nRF52 (usa ruido térmico), ponemos 0
     drv_aleatorios_iniciar(0);
 
-    // ------------------------------------------------------
-    // 4. Inicialización de la Aplicación (Nivel 3)
-    // ------------------------------------------------------
     
     // Inicia la máquina de estados del juego y suscribe sus funciones
     beat_hero_iniciar();

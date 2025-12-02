@@ -1,5 +1,5 @@
 Dependencies for Project 'blink_lpc', Target 'LPC': (DO NOT MODIFY !)
-F (..\..\src\main.c)(0x692F1E1F)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\..\src\main.c)(0x692F2B47)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (..\..\src\hal_gpio.h)(0x692F0758)
@@ -20,7 +20,6 @@ I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
 I (..\..\src\drv_aleatorios.h)(0x692F0758)
 I (..\..\src\beat_hero.h)(0x692F0758)
-I (..\..\src\app_jugar.h)(0x692F0758)
 I (..\..\src\drv_sonido.h)(0x692F0758)
 F (..\..\src\drv_leds.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_leds.o --omf_browse .\objects\drv_leds.crf --depend .\objects\drv_leds.d)
 I (..\..\src\hal_gpio.h)(0x692F0758)
@@ -32,7 +31,7 @@ I (../src_lpc/board_lpc.h)(0x692F0757)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
 F (..\..\src\drv_leds.h)(0x692F0758)()
-F (..\..\src\drv_tiempo.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_tiempo.o --omf_browse .\objects\drv_tiempo.crf --depend .\objects\drv_tiempo.d)
+F (..\..\src\drv_tiempo.c)(0x692F2F10)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_tiempo.o --omf_browse .\objects\drv_tiempo.crf --depend .\objects\drv_tiempo.d)
 I (..\..\src\drv_tiempo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
@@ -73,7 +72,7 @@ I (..\..\src\drv_tiempo.h)(0x692F0758)
 I (..\..\src\drv_SC.h)(0x692F0758)
 F (..\..\src\rt_fifo.h)(0x692F0758)()
 F (..\..\src\rt_evento_t.h)(0x692F0758)()
-F (..\..\src\drv_botones.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_botones.o --omf_browse .\objects\drv_botones.crf --depend .\objects\drv_botones.d)
+F (..\..\src\drv_botones.c)(0x692F277B)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_botones.o --omf_browse .\objects\drv_botones.crf --depend .\objects\drv_botones.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
@@ -151,7 +150,7 @@ I (..\..\src\drv_aleatorios.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\hal_aleatorios.h)(0x692F0758)
 F (..\..\src\drv_aleatorios.h)(0x692F0758)()
-F (..\..\src\beat_hero.c)(0x692F15C5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
+F (..\..\src\beat_hero.c)(0x692F2A0C)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
 I (..\..\src\beat_hero.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\rt_evento_t.h)(0x692F0758)
@@ -231,7 +230,7 @@ I (../../src/hal_consumo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\INC\Philips\LPC21xx.H)(0x559D3D78)
-F (..\src_lpc\hal_ext_int_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_ext_int_lpc.o --omf_browse .\objects\hal_ext_int_lpc.crf --depend .\objects\hal_ext_int_lpc.d)
+F (..\src_lpc\hal_ext_int_lpc.c)(0x692F2782)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_ext_int_lpc.o --omf_browse .\objects\hal_ext_int_lpc.crf --depend .\objects\hal_ext_int_lpc.d)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (../../src/hal_ext_int.h)(0x692F0758)

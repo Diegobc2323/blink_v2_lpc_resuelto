@@ -32,7 +32,7 @@ extern "C" {
 typedef uint8_t MONITOR_id_t;
 #define MONITOR_ID_INVALID ((MONITOR_id_t)0xFF)
 
-/* Estado l�gico del MONITOR */
+/* Estado lógico del MONITOR */
 typedef enum {
     MONITOR_OFF = 0,
     MONITOR_ON  = 1,

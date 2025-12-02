@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\blink_nrf.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\blink_nrf.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Dec 02 17:59:43 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Dec 02 19:26:47 2025
 <BR><P>
 <H3>Maximum Stack Usage =        120 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -537,7 +537,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4a]"></a>drv_tiempo_actual_us</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
+<P><STRONG><a name="[4a]"></a>drv_tiempo_actual_us</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = drv_tiempo_actual_us &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_actual_tick64
@@ -556,8 +556,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[70]"></a>drv_tiempo_periodico_ms</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
+<P><STRONG><a name="[70]"></a>drv_tiempo_periodico_ms</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_reloj_periodico_tick
 </UL>
@@ -770,7 +770,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[75]"></a>svc_alarma_iniciar</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, svc_alarmas.o(i.svc_alarma_iniciar))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svc_alarma_iniciar &rArr; rt_GE_suscribir
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = svc_alarma_iniciar &rArr; drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_periodico_ms

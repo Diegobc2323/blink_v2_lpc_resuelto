@@ -34,8 +34,36 @@ void rt_GE_lanzador(void);
  */
 void rt_GE_actualizar(EVENTO_T ID_evento, uint32_t auxiliar);
 
+/**
+ * @brief Suscribe un callback a un tipo de evento especifico.
+ *
+ * Registra una funcion callback para ser invocada cuando ocurra un evento
+ * del tipo indicado. Los callbacks se almacenan ordenados por prioridad
+ * (menor numero = mayor prioridad, se ejecutan primero).
+ *
+ * Si se alcanza el maximo de suscriptores (rt_GE_MAX_SUSCRITOS), el sistema
+ * marca el monitor de overflow y se detiene con un bucle infinito.
+ *
+ * @param ID_evento Tipo de evento al que suscribirse (ver rt_evento_t.h).
+ * @param prioridad Prioridad de ejecucion (0=alta, 255=baja). Los callbacks 
+ *                  con menor numero se ejecutan primero.
+ * @param f_callback Puntero a la funcion callback con firma: 
+ *                   void callback(EVENTO_T evento, uint32_t auxData).
+ */
 void rt_GE_suscribir(EVENTO_T ID_evento, uint8_t prioridad, f_callback_GE f_callback);
 
+/**
+ * @brief Desuscribe un callback de un tipo de evento.
+ *
+ * Elimina una suscripcion previamente registrada con rt_GE_suscribir().
+ * Busca el callback en la lista de suscritos y lo elimina, compactando
+ * el array para mantener la lista contigua.
+ *
+ * Si el callback no esta suscrito al evento, la funcion no hace nada.
+ *
+ * @param ID_evento Tipo de evento del que desuscribirse.
+ * @param f_callback Puntero al callback que se desea eliminar.
+ */
 void rt_GE_cancelar(EVENTO_T ID_evento, f_callback_GE f_callback);
 
 #endif /* RT_GE_H */

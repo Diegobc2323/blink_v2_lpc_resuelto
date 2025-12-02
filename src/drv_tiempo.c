@@ -13,7 +13,7 @@
 static hal_tiempo_info_t s_hal_info;
 static bool s_iniciado = false;
 static uint32_t s_parametro = 0;
-static void(*s_funcion)(uint32_t, uint32_t) = NULL; // Corregido tipo
+static void(*s_funcion)(uint32_t, uint32_t) = NULL;
 
 /**
  * inicializa el reloj y empieza a contar
@@ -68,9 +68,7 @@ void drv_tiempo_esperar_ms(Tiempo_ms_t ms) {
 Tiempo_ms_t drv_tiempo_esperar_hasta_ms(Tiempo_ms_t deadline_ms) {
     Tiempo_ms_t ahora = drv_tiempo_actual_ms();
 
-    if ((Tiempo_ms_t)(ahora - deadline_ms) <= (Tiempo_ms_t)0) {
-       // Ya paso
-    }
+
 
     while (1) {
         ahora = drv_tiempo_actual_ms();
@@ -79,7 +77,7 @@ Tiempo_ms_t drv_tiempo_esperar_hasta_ms(Tiempo_ms_t deadline_ms) {
     return ahora;
 }
 
-// --- CORRECCIÓN IMPORTANTE AQUÍ ---
+
 // Definimos el tipo de puntero compatible con rt_FIFO_encolar (2 argumentos)
 typedef void (*f_callback_fifo_t)(uint32_t, uint32_t);
 

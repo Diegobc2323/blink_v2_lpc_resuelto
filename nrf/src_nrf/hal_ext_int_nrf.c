@@ -49,28 +49,27 @@ static const uint32_t BUTTON_PIN_CNF_BASE =
 void GPIOTE_IRQHandler(void) __irq
 {
     if (NRF_GPIOTE->EVENTS_PORT) {
-        // 1. Limpiar el evento general de puerto
+        //Limpiar el evento general de puerto
         NRF_GPIOTE->EVENTS_PORT = 0;
         
-        // 2. Leer el registro LATCH para identificar qué pin(es) han causado la interrupción
+        //Leer el registro LATCH para identificar qué pin(es) han causado la interrupción
         uint32_t latch_p0 = NRF_P0->LATCH;
         
-        // 3. Iterar por cada línea de botón configurada
+        //Iterar por cada línea de botón configurada
         for (uint32_t i = 0; i < BUTTONS_NUMBER; i++) {
             uint32_t pin = s_pins_lineas[i];
             
             // Comprobar si el pin está marcado en el LATCH
             if (pin < 32 && (latch_p0 & (1UL << pin))) {
                 
-                // 4. Limpiar el LATCH para este pin (escribiendo un 1)
+                // Limpiar el LATCH para este pin (escribiendo un 1)
                 NRF_P0->LATCH = (1UL << pin);
                 
-                // 5. Llamar al callback del driver (si está registrado)
+                // Llamar al callback del driver (si está registrado)
                 if (s_hal_callback) {
                     s_hal_callback(i); // i es el ID lógico de la línea
                 }
             }
-            // (La lógica para el Puerto 1 (NRF_P1) no es necesaria para la DK)
         }
     }
 }
@@ -82,23 +81,21 @@ void GPIOTE_IRQHandler(void) __irq
  */
 void hal_ext_int_iniciar(hal_ext_int_callback_t callback) 
 {
-    // 1. Guardar el puntero al callback que invocará la ISR
+    //Guardar el puntero al callback que invocará la ISR
     s_hal_callback = callback;
 
-    // 2. Configurar los pines GPIO de los botones (inicialmente sin SENSE activo)
+    //Configurar los pines GPIO de los botones (inicialmente sin SENSE activo)
     for (uint32_t i = 0; i < BUTTONS_NUMBER; i++) {
         uint32_t pin = s_pins_lineas[i];
         if (pin < 32) {
             NRF_P0->PIN_CNF[pin] = BUTTON_PIN_CNF_BASE;
-        } else {
-            // Lógica para P1 (no aplica en DK)
         }
     }
 
-    // 3. Habilitar la interrupción para el evento PORT
+    //Habilitar la interrupción para el evento PORT
     NRF_GPIOTE->INTENSET = GPIOTE_INTENSET_PORT_Msk;
 
-    // 4. Habilitar la IRQ global del GPIOTE en el NVIC
+    // Habilitar la IRQ global del GPIOTE en el NVIC
     NVIC_ClearPendingIRQ(GPIOTE_IRQn);
     NVIC_EnableIRQ(GPIOTE_IRQn);
 }

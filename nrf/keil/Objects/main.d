@@ -17,5 +17,4 @@
 .\objects\main.o: ../src_nrf/board_nrf52840dk.h
 .\objects\main.o: ..\..\src\drv_aleatorios.h
 .\objects\main.o: ..\..\src\beat_hero.h
-.\objects\main.o: ..\..\src\app_jugar.h
 .\objects\main.o: ..\..\src\drv_sonido.h

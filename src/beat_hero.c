@@ -220,6 +220,8 @@ static void reiniciar_variables_juego(void) {
 
 static void avanzar_compas(void) {
     if (compas[0] != 0) {
+              s_score--;
+        juego_stats.Score = s_score;
         juego_stats.NotasFalladas++;
         juego_stats.ComboActual = 0;
     }
@@ -227,7 +229,7 @@ static void avanzar_compas(void) {
     compas[0] = compas[1]; compas[1] = compas[2];
     uint32_t rnd = drv_aleatorios_rango(100);
     uint8_t p = 0;
-    
+
     if (s_nivel_dificultad == 1)       p = (rnd > 50) ? 1 : 2;
     else if (s_nivel_dificultad == 2) p = (rnd < 20) ? 0 : ((rnd < 60) ? 1 : 2);
     else                              p = (rnd < 15) ? 0 : ((rnd < 45) ? 1 : ((rnd < 75) ? 2 : 3));
@@ -252,8 +254,6 @@ static int calcular_puntuacion(Tiempo_us_t now) {
     if(s_duracion_compas_ms == 0) return 0;
     uint32_t pct = (diff_ms * 100) / s_duracion_compas_ms;
     
-    // --- LÓGICA CORREGIDA ---
-    // Aumentamos el margen de aciertos normales al 50% para ser más justos
     if (pct <= 10) { 
         juego_stats.AciertosPerfectos++; 
         return 2; 
@@ -262,11 +262,11 @@ static int calcular_puntuacion(Tiempo_us_t now) {
         juego_stats.AciertosBuenos++;    
         return 1; 
     }
-    if (pct <= 50) { // Antes era 40%, subido a 50%
+    if (pct <= 40) {
         juego_stats.AciertosNormales++;  
         return 0; 
     }
-    // Si tarda más del 50%, devuelve -1 (Fallo por tiempo)
+    // Si tarda más del 40%, devuelve -1 (Fallo por tiempo)
     return -1;
 }
 
@@ -286,9 +286,7 @@ static void evaluar_jugada(uint8_t input_mask) {
         
         juego_stats.Score = s_score;
 
-        // --- CORRECCIÓN CLAVE ---
-        // Solo contamos como "NotaAcertada" si puntos >= 0.
-        // Si puntos es -1, fue un acierto de botón pero muy tarde (Miss)
+
         if (puntos >= 0) {
             juego_stats.NotasAcertadas++;
             juego_stats.ComboActual++;
@@ -301,7 +299,7 @@ static void evaluar_jugada(uint8_t input_mask) {
                 juego_stats.PromedioReaccion_ms = (int32_t)(juego_stats.SumaTiemposReaccion / juego_stats.NotasAcertadas);
             }
         } else {
-            // Acierto de botón pero fuera de tiempo (>50%)
+            // Acierto de botón pero fuera de tiempo (>40%)
             juego_stats.NotasFalladas++;
             juego_stats.ComboActual = 0;
         }
