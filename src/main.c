@@ -13,68 +13,53 @@
 #include "board.h"
 #include "drv_aleatorios.h" 
 #include "beat_hero.h"
-
-
 #include "drv_sonido.h"
+#include "test.h"
 
-// Estado global de los botones
-static bool btn_states[BUTTONS_NUMBER] = {false};
-
-//void app_test_simultaneo(EVENTO_T evento, uint32_t id_boton) {
-//    // Solo nos interesan los 2 primeros botones para esta prueba
-//    if (id_boton >= BUTTONS_NUMBER) return;
-
-//    // 1. Actualizar estado
-//    if (evento == ev_PULSAR_BOTON) {
-//        btn_states[id_boton] = true;
-//        // DEBUG VISUAL: LED 1 para Botón 1, LED 2 para Botón 2
-//        if (id_boton == 0) drv_led_establecer(1, LED_ON);
-//        if (id_boton == 1) drv_led_establecer(2, LED_ON);
-//    } 
-//    else if (evento == ev_SOLTAR_BOTON) {
-//        btn_states[id_boton] = false;
-//        // DEBUG VISUAL: Apagar al soltar
-//        if (id_boton == 0) drv_led_establecer(1, LED_OFF);
-//        if (id_boton == 1) drv_led_establecer(2, LED_OFF);
-//    }
-
-//    // 2. Lógica simultánea (LED 4)
-//    if (btn_states[0] && btn_states[1]) {
-//        drv_led_establecer(4, LED_ON);
-//    } else {
-//        drv_led_establecer(4, LED_OFF);
-//    }
-//}
+volatile uint32_t testsPasados = 0;
 
 int main(void){
-    // Inicializaciones de Hardware básico
+    // 1. Inicializaciones de Hardware básico
     drv_tiempo_iniciar(); 
     hal_gpio_iniciar(); 
-	  drv_consumo_iniciar(4); 
+    drv_consumo_iniciar(4); 
     drv_monitor_iniciar();
-		drv_sonido_iniciar();
+    drv_sonido_iniciar();
     drv_leds_iniciar();
   
-    // Inicializaciones del Sistema (Runtime)
+    // 2. Inicializaciones del Sistema (Runtime)
+    // Inicializamos la FIFO y el Gestor, pero AÚN NO los generadores de eventos
     rt_FIFO_inicializar(1); // Monitor ID 2
     rt_GE_iniciar(3);       // Monitor ID 3
     
-    // Inicializaciones de Servicios y Drivers (que usan rt_GE)
-    svc_alarma_iniciar(2, rt_FIFO_encolar, ev_T_PERIODICO); // Monitor ID 2
-    
-    // Iniciar Botones AHORA, después de que el GE esté listo
+    // ------------------------------------------------------
+    // 3. EJECUCIÓN DE TESTS AUTOMÁTICOS (Zona Segura)
+    // ------------------------------------------------------
+    // Los ejecutamos AHORA, antes de que las alarmas o botones 
+    // empiecen a llenar la cola y causen overflow durante el test.
+    testsPasados = test_ejecutar_todos();
+
+    // ------------------------------------------------------
+    // 4. Inicialización de Servicios y Drivers (El "Grifo" de eventos)
+    // ------------------------------------------------------
+    // Ahora que los tests pasaron, activamos el resto del sistema
+    svc_alarma_iniciar(4, rt_FIFO_encolar, ev_T_PERIODICO); 
     drv_botones_iniciar(rt_FIFO_encolar, ev_PULSAR_BOTON, ev_SOLTAR_BOTON, ev_BOTON_TIMER);
-  
-    
-		// Driver de Aleatorios
-    // La semilla se ignora en nRF52 (usa ruido térmico), ponemos 0
     drv_aleatorios_iniciar(0);
 
-    
-    // Inicia la máquina de estados del juego y suscribe sus funciones
+    // ------------------------------------------------------
+    // 5. Test Interactivo (Opcional)
+    // ------------------------------------------------------
+    // Este test SÍ necesita los botones activados, por eso va aquí.
+    // Descomentar si quieres probar los botones antes de jugar:
+    // test_botones_simultaneos(); 
+
+    // ------------------------------------------------------
+    // 6. Arranque del Juego
+    // ------------------------------------------------------
     beat_hero_iniciar();
-		//app_juego_iniciar();
-    // Lanzar sistema
+    
+    // Lanzar el despachador de eventos (Bucle infinito)
     rt_GE_lanzador();
 
     while (1);

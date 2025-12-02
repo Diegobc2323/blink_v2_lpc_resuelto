@@ -171,7 +171,7 @@ void hal_ext_int_limpiar_pendiente(uint32_t id_linea)
 // ISR para EINT1 (P0.14)
 __irq void EINT1_IRQHandler(void) {
         VICIntEnClr = (1 << 15); 
-    // Limpiar flag ANTES del callback (Level-Sensitive)
+    // CRÍTICO: Limpiar flag ANTES del callback (Level-Sensitive)
     EXTINT = (1 << 1);
     
     // Traducir pin a ID de botón y ejecutar callback
@@ -190,7 +190,7 @@ __irq void EINT1_IRQHandler(void) {
 __irq void EINT2_IRQHandler(void) {
     VICIntEnClr = (1 << 16); 
     
-    // Limpiar flag ANTES del callback (Level-Sensitive)
+    // CRÍTICO: Limpiar flag ANTES del callback (Level-Sensitive)
     EXTINT = (1 << 2);
     
     // Traducir pin a ID de botón y ejecutar callback
@@ -209,7 +209,7 @@ __irq void EINT2_IRQHandler(void) {
 __irq void EINT0_IRQHandler(void) {
     VICIntEnClr = (1 << 14); 
     
-    // Limpiar flag ANTES del callback (Level-Sensitive)
+    // CRÍTICO: Limpiar flag ANTES del callback (Level-Sensitive)
     EXTINT = (1 << 0);
     
     // Traducir pin a ID de botón y ejecutar callback

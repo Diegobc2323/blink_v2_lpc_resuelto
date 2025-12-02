@@ -15,13 +15,12 @@
 #define TAMCOLA 32
 typedef uint32_t indice_cola_t;
 
-// Estructura de la cola circular FIFO
 typedef struct {
-    EVENTO cola[TAMCOLA];                    // Buffer circular de eventos
-    MONITOR_id_t monitor;                    // ID del monitor para overflow
-    indice_cola_t ultimo_tratado;            // Último índice extraído
-    indice_cola_t siguiente_a_tratar;        // Próximo índice a extraer
-    volatile uint32_t eventos_a_tratar;      // Eventos pendientes en cola
+    EVENTO cola[TAMCOLA];
+    MONITOR_id_t monitor;
+    indice_cola_t ultimo_tratado;
+    indice_cola_t siguiente_a_tratar;
+    volatile uint32_t eventos_a_tratar; 
 } RT_FIFO;
 
 static bool s_iniciado = false;
@@ -48,11 +47,9 @@ void rt_FIFO_inicializar(uint32_t monitor_overflow){
   #endif
 }
 
-
 void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
   if (!s_iniciado) return;
   
-  // Preparar el evento con timestamp
   EVENTO ev;
   ev.ID_EVENTO = (EVENTO_T)ID_evento;
   ev.auxData = auxData;
@@ -78,16 +75,13 @@ void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
   }
   #endif
   
-  // Protección contra overflow: si la cola está llena, marcamos error fatal
   if (s_rt_fifo.eventos_a_tratar > TAMCOLA) 
   {
     drv_monitor_marcar(s_rt_fifo.monitor);
     drv_SC_salir_enable_irq();
-    while (1);  // Sistema detenido por overflow
+    while (1);
   }
   
-  // Calcular índice circular para insertar al final de la cola
-  // Fórmula: (inicio + cantidad - 1) % tamaño
   uint32_t indice = (s_rt_fifo.siguiente_a_tratar + s_rt_fifo.eventos_a_tratar - 1) % TAMCOLA;
   s_rt_fifo.cola[indice] = ev;
 
@@ -95,39 +89,31 @@ void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
   drv_SC_salir_enable_irq(); 
 }
 
-
-
 uint8_t rt_FIFO_extraer(EVENTO_T *ID_evento, uint32_t *auxData, Tiempo_us_t *TS){
   // --- SECCIÓN CRÍTICA: INICIO ---
   uint32_t estado_anterior = drv_SC_entrar_disable_irq();
 
-  // Si la cola está vacía, salir inmediatamente
   if(s_rt_fifo.eventos_a_tratar==0) {
       drv_SC_salir_enable_irq();
       return 0;
   }
   
-  // Extraer evento del frente de la cola
   EVENTO ev = s_rt_fifo.cola[s_rt_fifo.siguiente_a_tratar];
   
-  // Actualizar índices circulares
   s_rt_fifo.ultimo_tratado = s_rt_fifo.siguiente_a_tratar;
   s_rt_fifo.siguiente_a_tratar = (s_rt_fifo.siguiente_a_tratar + 1) % TAMCOLA;
 
-  // Decrementar contador de eventos pendientes
   s_rt_fifo.eventos_a_tratar--;
   
   #ifdef DEBUG
   dbg_fifo_uso_actual = s_rt_fifo.eventos_a_tratar;
   #endif
   
-  // Calcular valor de retorno
   uint8_t ret = s_rt_fifo.eventos_a_tratar == 0 ? 1 : s_rt_fifo.eventos_a_tratar;
 
   // --- SECCIÓN CRÍTICA: FIN ---
   drv_SC_salir_enable_irq();
 
-  // Copiar datos del evento a los punteros de salida (fuera de SC)
   if (ID_evento) *ID_evento = ev.ID_EVENTO;
   if (auxData)   *auxData = ev.auxData;
   if (TS)        *TS = ev.TS;

@@ -20,3 +20,4 @@
 .\objects\main.o: ..\..\src\drv_aleatorios.h
 .\objects\main.o: ..\..\src\beat_hero.h
 .\objects\main.o: ..\..\src\drv_sonido.h
+.\objects\main.o: ..\..\src\test.h
