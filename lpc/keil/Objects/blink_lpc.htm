@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\blink_lpc.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\blink_lpc.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Dec 02 17:12:34 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Dec 02 18:13:09 2025
 <BR><P>
 <H3>Maximum Stack Usage =        120 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -14,7 +14,7 @@ Functions with no stack information
 </H3><UL>
  <LI><a href="#[4]">Reset_Handler</a>
  <LI><a href="#[2c]">__user_initial_stackheap</a>
- <LI><a href="#[67]">switch_to_PLL</a>
+ <LI><a href="#[68]">switch_to_PLL</a>
  <LI><a href="#[5]">Undef_Handler</a>
  <LI><a href="#[6]">SWI_Handler</a>
  <LI><a href="#[7]">PAbt_Handler</a>
@@ -79,7 +79,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[74]"></a>__scatterload_null</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[75]"></a>__scatterload_null</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[1d]"></a>__scatterload_copy</STRONG> (ARM, 40 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -87,17 +87,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[75]"></a>__scatterload_zeroinit</STRONG> (ARM, 44 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[76]"></a>__scatterload_zeroinit</STRONG> (ARM, 44 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[23]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li (via Veneer)
 </UL>
 
-<P><STRONG><a name="[76]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[77]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[77]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[78]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[78]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[79]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
 <P><STRONG><a name="[1e]"></a>__rt_lib_init_rand_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -106,66 +106,66 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rand_init
 </UL>
 
-<P><STRONG><a name="[79]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[7a]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[7a]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[7b]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[7b]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[7c]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[7c]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[7d]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[7d]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[7e]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[7e]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[7f]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[7f]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[80]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[80]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[81]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[81]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[82]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[82]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[83]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[83]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[84]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[84]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[85]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[85]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[86]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[86]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[87]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[87]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[88]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[88]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[89]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
-<P><STRONG><a name="[89]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[8a]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[8a]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[8b]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
 <P><STRONG><a name="[27]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls (via Veneer)
 </UL>
 
-<P><STRONG><a name="[8b]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[8c]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[8c]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[8d]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[8d]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[8e]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[8e]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[8f]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[8f]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[90]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[90]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[91]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[91]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[92]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[1b]"></a>__rt_entry</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[92]"></a>__rt_entry_presh_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[93]"></a>__rt_entry_presh_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[20]"></a>__rt_entry_sh</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -178,7 +178,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
 </UL>
 
-<P><STRONG><a name="[93]"></a>__rt_entry_postsh_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[94]"></a>__rt_entry_postsh_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[24]"></a>__rt_entry_main</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -187,7 +187,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit (via BX)
 </UL>
 
-<P><STRONG><a name="[94]"></a>__rt_entry_postli_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[95]"></a>__rt_entry_postli_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[2e]"></a>__rt_exit</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit (via Veneer)
@@ -197,39 +197,39 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown (via Veneer)
 </UL>
 
-<P><STRONG><a name="[95]"></a>__rt_exit_prels_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[96]"></a>__rt_exit_prels_1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[28]"></a>__rt_exit_exit</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit (via Veneer)
 </UL>
 
-<P><STRONG><a name="[66]"></a>rand</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, rand.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_obtener_32bits (via Veneer)
+<P><STRONG><a name="[67]"></a>rand</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, rand.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_obtener_32bits (via Veneer)
 </UL>
 
 <P><STRONG><a name="[2c]"></a>__user_initial_stackheap</STRONG> (ARM, 0 bytes, Stack size unknown bytes, startup.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[67]"></a>switch_to_PLL</STRONG> (ARM, 0 bytes, Stack size unknown bytes, startup.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_dormir
+<P><STRONG><a name="[68]"></a>switch_to_PLL</STRONG> (ARM, 0 bytes, Stack size unknown bytes, startup.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_dormir
 </UL>
 
-<P><STRONG><a name="[3b]"></a>__aeabi_uldivmod</STRONG> (ARM, 0 bytes, Stack size 24 bytes, lludiv.o(.text))
+<P><STRONG><a name="[3c]"></a>__aeabi_uldivmod</STRONG> (ARM, 0 bytes, Stack size 24 bytes, lludiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
 </UL>
 
-<P><STRONG><a name="[96]"></a>_ll_udiv</STRONG> (ARM, 720 bytes, Stack size 24 bytes, lludiv.o(.text), UNUSED)
+<P><STRONG><a name="[97]"></a>_ll_udiv</STRONG> (ARM, 720 bytes, Stack size 24 bytes, lludiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[97]"></a>_ll_udiv_donemoving</STRONG> (ARM, 0 bytes, Stack size unknown bytes, lludiv.o(.text), UNUSED)
+<P><STRONG><a name="[98]"></a>_ll_udiv_donemoving</STRONG> (ARM, 0 bytes, Stack size unknown bytes, lludiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[2a]"></a>srand</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, rand.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = srand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_iniciar (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_iniciar (via Veneer)
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_rand_init
 </UL>
 
@@ -241,15 +241,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_rand_2
 </UL>
 
-<P><STRONG><a name="[98]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
+<P><STRONG><a name="[99]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
 
-<P><STRONG><a name="[99]"></a>__aeabi_idivmod</STRONG> (ARM, 556 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
+<P><STRONG><a name="[9a]"></a>__aeabi_idivmod</STRONG> (ARM, 556 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
 
-<P><STRONG><a name="[9a]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[9b]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[9b]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[9c]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[9d]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[21]"></a>__user_setup_stackheap</STRONG> (ARM, 96 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -271,23 +271,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[9d]"></a>__user_libspace</STRONG> (ARM, 12 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[9e]"></a>__user_libspace</STRONG> (ARM, 12 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[2b]"></a>__user_perproc_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[9e]"></a>__user_perthread_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[9f]"></a>__user_perthread_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[29]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit (via Veneer)
 </UL>
 
-<P><STRONG><a name="[9f]"></a>__I$use$semihosting</STRONG> (ARM, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[a0]"></a>__I$use$semihosting</STRONG> (ARM, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a0]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[a1]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a1]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text_udiv), UNUSED)
+<P><STRONG><a name="[a2]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text_udiv), UNUSED)
 
 <P><STRONG><a name="[2f]"></a>__aeabi_uidivmod</STRONG> (ARM, 48 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text_udiv))
 <BR><BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div2
@@ -298,10 +298,10 @@ Global Symbols
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div_large_positive
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
 </UL>
 
-<P><STRONG><a name="[a2]"></a>__semihosting_library_function</STRONG> (ARM, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[a3]"></a>__semihosting_library_function</STRONG> (ARM, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[15]"></a>T0_ISR</STRONG> (ARM, 56 bytes, Stack size 24 bytes, hal_tiempo_lpc.o(i.T0_ISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = T0_ISR
@@ -313,82 +313,83 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> hal_tiempo_lpc.o(i.hal_tiempo_iniciar_tick)
 </UL>
-<P><STRONG><a name="[d]"></a>beat_hero_actualizar</STRONG> (ARM, 1320 bytes, Stack size 32 bytes, beat_hero.o(i.beat_hero_actualizar))
+<P><STRONG><a name="[d]"></a>beat_hero_actualizar</STRONG> (ARM, 1376 bytes, Stack size 32 bytes, beat_hero.o(i.beat_hero_actualizar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = beat_hero_actualizar &rArr; finalizar_partida &rArr; svc_alarma_activar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
+<BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reiniciar_variables_juego
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> beat_hero.o(i.beat_hero_iniciar)
 </UL>
-<P><STRONG><a name="[40]"></a>beat_hero_iniciar</STRONG> (ARM, 212 bytes, Stack size 16 bytes, beat_hero.o(i.beat_hero_iniciar))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = beat_hero_iniciar &rArr; svc_alarma_activar
+<P><STRONG><a name="[41]"></a>beat_hero_iniciar</STRONG> (ARM, 120 bytes, Stack size 8 bytes, beat_hero.o(i.beat_hero_iniciar))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = beat_hero_iniciar &rArr; reiniciar_variables_juego &rArr; svc_alarma_activar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
+<BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reiniciar_variables_juego
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[43]"></a>deshabilitar_irq</STRONG> (ARM, 16 bytes, Stack size 0 bytes, hal_sc.o(i.deshabilitar_irq))
-<BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
+<P><STRONG><a name="[44]"></a>deshabilitar_irq</STRONG> (ARM, 16 bytes, Stack size 0 bytes, hal_sc.o(i.deshabilitar_irq))
+<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
 </UL>
 
-<P><STRONG><a name="[42]"></a>drv_SC_entrar_disable_irq</STRONG> (ARM, 32 bytes, Stack size 8 bytes, drv_sc.o(i.drv_SC_entrar_disable_irq))
+<P><STRONG><a name="[43]"></a>drv_SC_entrar_disable_irq</STRONG> (ARM, 32 bytes, Stack size 8 bytes, drv_sc.o(i.drv_SC_entrar_disable_irq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_SC_entrar_disable_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;deshabilitar_irq
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;deshabilitar_irq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_encolar
 </UL>
 
-<P><STRONG><a name="[44]"></a>drv_SC_salir_enable_irq</STRONG> (ARM, 24 bytes, Stack size 0 bytes, drv_sc.o(i.drv_SC_salir_enable_irq))
-<BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;habilitar_irq
+<P><STRONG><a name="[45]"></a>drv_SC_salir_enable_irq</STRONG> (ARM, 24 bytes, Stack size 0 bytes, drv_sc.o(i.drv_SC_salir_enable_irq))
+<BR><BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;habilitar_irq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_encolar
 </UL>
 
-<P><STRONG><a name="[46]"></a>drv_WDT_alimentar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_wdt.o(i.drv_WDT_alimentar))
-<BR><BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_WDT_feed
+<P><STRONG><a name="[47]"></a>drv_WDT_alimentar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_wdt.o(i.drv_WDT_alimentar))
+<BR><BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_WDT_feed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
-</UL>
-
-<P><STRONG><a name="[48]"></a>drv_WDT_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_wdt.o(i.drv_WDT_iniciar))
-<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_WDT_iniciar
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 </UL>
 
-<P><STRONG><a name="[4a]"></a>drv_aleatorios_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_aleatorios.o(i.drv_aleatorios_iniciar))
+<P><STRONG><a name="[49]"></a>drv_WDT_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_wdt.o(i.drv_WDT_iniciar))
+<BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_WDT_iniciar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
+</UL>
+
+<P><STRONG><a name="[4b]"></a>drv_aleatorios_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_aleatorios.o(i.drv_aleatorios_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_aleatorios_iniciar &rArr; hal_aleatorios_iniciar &rArr; srand
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_iniciar
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_iniciar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3c]"></a>drv_aleatorios_rango</STRONG> (ARM, 40 bytes, Stack size 8 bytes, drv_aleatorios.o(i.drv_aleatorios_rango))
+<P><STRONG><a name="[3d]"></a>drv_aleatorios_rango</STRONG> (ARM, 40 bytes, Stack size 8 bytes, drv_aleatorios.o(i.drv_aleatorios_rango))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = drv_aleatorios_rango &rArr; hal_aleatorios_obtener_32bits
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_obtener_32bits
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_aleatorios_obtener_32bits
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
@@ -399,47 +400,47 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_limpiar_pendiente
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_habilitar
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_leer
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_limpiar_pendiente
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_habilitar
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_leer
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> drv_botones.o(i.drv_botones_iniciar)
 </UL>
-<P><STRONG><a name="[50]"></a>drv_botones_iniciar</STRONG> (ARM, 128 bytes, Stack size 8 bytes, drv_botones.o(i.drv_botones_iniciar))
+<P><STRONG><a name="[51]"></a>drv_botones_iniciar</STRONG> (ARM, 128 bytes, Stack size 8 bytes, drv_botones.o(i.drv_botones_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = drv_botones_iniciar &rArr; hal_ext_int_iniciar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_iniciar
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_habilitar
+<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_iniciar
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_habilitar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[53]"></a>drv_consumo_dormir</STRONG> (ARM, 48 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_dormir))
+<P><STRONG><a name="[54]"></a>drv_consumo_dormir</STRONG> (ARM, 48 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_dormir))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = drv_consumo_dormir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_dormir
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_dormir
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_actualizar
 </UL>
 
-<P><STRONG><a name="[57]"></a>drv_consumo_esperar</STRONG> (ARM, 48 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_esperar))
+<P><STRONG><a name="[58]"></a>drv_consumo_esperar</STRONG> (ARM, 48 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_esperar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_consumo_esperar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_esperar
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_esperar
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 </UL>
 
-<P><STRONG><a name="[59]"></a>drv_consumo_iniciar</STRONG> (ARM, 40 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_iniciar))
+<P><STRONG><a name="[5a]"></a>drv_consumo_iniciar</STRONG> (ARM, 40 bytes, Stack size 8 bytes, drv_consumo.o(i.drv_consumo_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_consumo_iniciar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_iniciar
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_consumo_iniciar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -447,224 +448,225 @@ Global Symbols
 <P><STRONG><a name="[10]"></a>drv_funcion_callback_app</STRONG> (ARM, 28 bytes, Stack size 0 bytes, drv_tiempo.o(i.drv_funcion_callback_app))
 <BR>[Address Reference Count : 1]<UL><LI> drv_tiempo.o(i.drv_tiempo_periodico_ms)
 </UL>
-<P><STRONG><a name="[38]"></a>drv_led_establecer</STRONG> (ARM, 68 bytes, Stack size 8 bytes, drv_leds.o(i.drv_led_establecer))
+<P><STRONG><a name="[39]"></a>drv_led_establecer</STRONG> (ARM, 68 bytes, Stack size 8 bytes, drv_leds.o(i.drv_led_establecer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_led_establecer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reiniciar_variables_juego
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
 </UL>
 
-<P><STRONG><a name="[5c]"></a>drv_leds_iniciar</STRONG> (ARM, 68 bytes, Stack size 16 bytes, drv_leds.o(i.drv_leds_iniciar))
+<P><STRONG><a name="[5d]"></a>drv_leds_iniciar</STRONG> (ARM, 68 bytes, Stack size 16 bytes, drv_leds.o(i.drv_leds_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = drv_leds_iniciar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_sentido
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_sentido
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[54]"></a>drv_monitor_desmarcar</STRONG> (ARM, 36 bytes, Stack size 0 bytes, drv_monitor.o(i.drv_monitor_desmarcar))
-<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
+<P><STRONG><a name="[55]"></a>drv_monitor_desmarcar</STRONG> (ARM, 36 bytes, Stack size 0 bytes, drv_monitor.o(i.drv_monitor_desmarcar))
+<BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
 </UL>
 
-<P><STRONG><a name="[5e]"></a>drv_monitor_iniciar</STRONG> (ARM, 68 bytes, Stack size 16 bytes, drv_monitor.o(i.drv_monitor_iniciar))
+<P><STRONG><a name="[5f]"></a>drv_monitor_iniciar</STRONG> (ARM, 68 bytes, Stack size 16 bytes, drv_monitor.o(i.drv_monitor_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = drv_monitor_iniciar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_sentido
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_sentido
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[56]"></a>drv_monitor_marcar</STRONG> (ARM, 36 bytes, Stack size 0 bytes, drv_monitor.o(i.drv_monitor_marcar))
-<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
+<P><STRONG><a name="[57]"></a>drv_monitor_marcar</STRONG> (ARM, 36 bytes, Stack size 0 bytes, drv_monitor.o(i.drv_monitor_marcar))
+<BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_escribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_encolar
 </UL>
 
-<P><STRONG><a name="[5f]"></a>drv_sonido_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_sonido.o(i.drv_sonido_iniciar))
-<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_sonido_iniciar
+<P><STRONG><a name="[60]"></a>drv_sonido_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, drv_sonido.o(i.drv_sonido_iniciar))
+<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_sonido_iniciar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3a]"></a>drv_tiempo_actual_us</STRONG> (ARM, 68 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
+<P><STRONG><a name="[3b]"></a>drv_tiempo_actual_us</STRONG> (ARM, 68 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_actual_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = drv_tiempo_actual_us &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_actual_tick64
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_actual_tick64
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_encolar
 </UL>
 
-<P><STRONG><a name="[62]"></a>drv_tiempo_iniciar</STRONG> (ARM, 32 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_iniciar))
+<P><STRONG><a name="[63]"></a>drv_tiempo_iniciar</STRONG> (ARM, 32 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = drv_tiempo_iniciar &rArr; hal_tiempo_iniciar_tick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_iniciar_tick
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_iniciar_tick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[64]"></a>drv_tiempo_periodico_ms</STRONG> (ARM, 64 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
+<P><STRONG><a name="[65]"></a>drv_tiempo_periodico_ms</STRONG> (ARM, 64 bytes, Stack size 8 bytes, drv_tiempo.o(i.drv_tiempo_periodico_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = drv_tiempo_periodico_ms &rArr; hal_tiempo_reloj_periodico_tick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_reloj_periodico_tick
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tiempo_reloj_periodico_tick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
-</UL>
-
-<P><STRONG><a name="[45]"></a>habilitar_irq</STRONG> (ARM, 16 bytes, Stack size 0 bytes, hal_sc.o(i.habilitar_irq))
-<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
 </UL>
 
-<P><STRONG><a name="[47]"></a>hal_WDT_feed</STRONG> (ARM, 24 bytes, Stack size 0 bytes, hal_wdt_lpc.o(i.hal_WDT_feed))
-<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_alimentar
+<P><STRONG><a name="[46]"></a>habilitar_irq</STRONG> (ARM, 16 bytes, Stack size 0 bytes, hal_sc.o(i.habilitar_irq))
+<BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
 </UL>
 
-<P><STRONG><a name="[49]"></a>hal_WDT_iniciar</STRONG> (ARM, 44 bytes, Stack size 0 bytes, hal_wdt_lpc.o(i.hal_WDT_iniciar))
-<BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_iniciar
+<P><STRONG><a name="[48]"></a>hal_WDT_feed</STRONG> (ARM, 24 bytes, Stack size 0 bytes, hal_wdt_lpc.o(i.hal_WDT_feed))
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_alimentar
 </UL>
 
-<P><STRONG><a name="[4b]"></a>hal_aleatorios_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, hal_aleatorios_lpc.o(i.hal_aleatorios_iniciar))
+<P><STRONG><a name="[4a]"></a>hal_WDT_iniciar</STRONG> (ARM, 44 bytes, Stack size 0 bytes, hal_wdt_lpc.o(i.hal_WDT_iniciar))
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_iniciar
+</UL>
+
+<P><STRONG><a name="[4c]"></a>hal_aleatorios_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, hal_aleatorios_lpc.o(i.hal_aleatorios_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = hal_aleatorios_iniciar &rArr; srand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;srand (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_iniciar
+<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_iniciar
 </UL>
 
-<P><STRONG><a name="[4c]"></a>hal_aleatorios_obtener_32bits</STRONG> (ARM, 56 bytes, Stack size 16 bytes, hal_aleatorios_lpc.o(i.hal_aleatorios_obtener_32bits))
+<P><STRONG><a name="[4d]"></a>hal_aleatorios_obtener_32bits</STRONG> (ARM, 56 bytes, Stack size 16 bytes, hal_aleatorios_lpc.o(i.hal_aleatorios_obtener_32bits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = hal_aleatorios_obtener_32bits
 </UL>
-<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
-</UL>
-
-<P><STRONG><a name="[55]"></a>hal_consumo_dormir</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_dormir))
-<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;switch_to_PLL
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
+<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_rango
 </UL>
 
-<P><STRONG><a name="[58]"></a>hal_consumo_esperar</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_esperar))
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
+<P><STRONG><a name="[56]"></a>hal_consumo_dormir</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_dormir))
+<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;switch_to_PLL
+</UL>
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
 </UL>
 
-<P><STRONG><a name="[5a]"></a>hal_consumo_iniciar</STRONG> (ARM, 20 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_iniciar))
-<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_iniciar
+<P><STRONG><a name="[59]"></a>hal_consumo_esperar</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_esperar))
+<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
 </UL>
 
-<P><STRONG><a name="[52]"></a>hal_ext_int_deshabilitar</STRONG> (ARM, 148 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_deshabilitar))
+<P><STRONG><a name="[5b]"></a>hal_consumo_iniciar</STRONG> (ARM, 20 bytes, Stack size 0 bytes, hal_consumo_lpc.o(i.hal_consumo_iniciar))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_iniciar
+</UL>
+
+<P><STRONG><a name="[53]"></a>hal_ext_int_deshabilitar</STRONG> (ARM, 148 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_deshabilitar))
 <BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_cb
 </UL>
 
-<P><STRONG><a name="[4d]"></a>hal_ext_int_habilitar</STRONG> (ARM, 160 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_habilitar))
+<P><STRONG><a name="[4e]"></a>hal_ext_int_habilitar</STRONG> (ARM, 160 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_habilitar))
 <BR><BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_actualizar
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
 </UL>
 
-<P><STRONG><a name="[51]"></a>hal_ext_int_iniciar</STRONG> (ARM, 272 bytes, Stack size 36 bytes, hal_ext_int_lpc.o(i.hal_ext_int_iniciar))
+<P><STRONG><a name="[52]"></a>hal_ext_int_iniciar</STRONG> (ARM, 272 bytes, Stack size 36 bytes, hal_ext_int_lpc.o(i.hal_ext_int_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = hal_ext_int_iniciar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
 </UL>
 
-<P><STRONG><a name="[4f]"></a>hal_ext_int_limpiar_pendiente</STRONG> (ARM, 76 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_limpiar_pendiente))
+<P><STRONG><a name="[50]"></a>hal_ext_int_limpiar_pendiente</STRONG> (ARM, 76 bytes, Stack size 0 bytes, hal_ext_int_lpc.o(i.hal_ext_int_limpiar_pendiente))
 <BR><BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_actualizar
 </UL>
 
-<P><STRONG><a name="[5b]"></a>hal_gpio_escribir</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_escribir))
-<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
+<P><STRONG><a name="[5c]"></a>hal_gpio_escribir</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_escribir))
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_desmarcar
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
 </UL>
 
-<P><STRONG><a name="[68]"></a>hal_gpio_iniciar</STRONG> (ARM, 20 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_iniciar))
+<P><STRONG><a name="[69]"></a>hal_gpio_iniciar</STRONG> (ARM, 20 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_iniciar))
 <BR><BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4e]"></a>hal_gpio_leer</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_leer))
+<P><STRONG><a name="[4f]"></a>hal_gpio_leer</STRONG> (ARM, 32 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_leer))
 <BR><BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_actualizar
 </UL>
 
-<P><STRONG><a name="[5d]"></a>hal_gpio_sentido</STRONG> (ARM, 56 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_sentido))
-<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
+<P><STRONG><a name="[5e]"></a>hal_gpio_sentido</STRONG> (ARM, 56 bytes, Stack size 0 bytes, hal_gpio_lpc.o(i.hal_gpio_sentido))
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
 </UL>
 
-<P><STRONG><a name="[60]"></a>hal_sonido_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, hal_sonido_lpc.o(i.hal_sonido_iniciar))
-<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_sonido_iniciar
+<P><STRONG><a name="[61]"></a>hal_sonido_iniciar</STRONG> (ARM, 4 bytes, Stack size 0 bytes, hal_sonido_lpc.o(i.hal_sonido_iniciar))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_sonido_iniciar
 </UL>
 
-<P><STRONG><a name="[61]"></a>hal_tiempo_actual_tick64</STRONG> (ARM, 40 bytes, Stack size 0 bytes, hal_tiempo_lpc.o(i.hal_tiempo_actual_tick64))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
+<P><STRONG><a name="[62]"></a>hal_tiempo_actual_tick64</STRONG> (ARM, 40 bytes, Stack size 0 bytes, hal_tiempo_lpc.o(i.hal_tiempo_actual_tick64))
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
 </UL>
 
-<P><STRONG><a name="[63]"></a>hal_tiempo_iniciar_tick</STRONG> (ARM, 140 bytes, Stack size 4 bytes, hal_tiempo_lpc.o(i.hal_tiempo_iniciar_tick))
+<P><STRONG><a name="[64]"></a>hal_tiempo_iniciar_tick</STRONG> (ARM, 140 bytes, Stack size 4 bytes, hal_tiempo_lpc.o(i.hal_tiempo_iniciar_tick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = hal_tiempo_iniciar_tick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_iniciar
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_iniciar
 </UL>
 
-<P><STRONG><a name="[65]"></a>hal_tiempo_reloj_periodico_tick</STRONG> (ARM, 140 bytes, Stack size 4 bytes, hal_tiempo_lpc.o(i.hal_tiempo_reloj_periodico_tick))
+<P><STRONG><a name="[66]"></a>hal_tiempo_reloj_periodico_tick</STRONG> (ARM, 140 bytes, Stack size 4 bytes, hal_tiempo_lpc.o(i.hal_tiempo_reloj_periodico_tick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = hal_tiempo_reloj_periodico_tick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_periodico_ms
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_periodico_ms
 </UL>
 
 <P><STRONG><a name="[c]"></a>main</STRONG> (ARM, 100 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; rt_GE_lanzador &rArr; svc_alarma_activar
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = main &rArr; rt_GE_lanzador &rArr; svc_alarma_activar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_inicializar
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_iniciar
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_iniciar
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_sonido_iniciar
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_iniciar
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_iniciar
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_inicializar
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_iniciar
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_iniciar
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_sonido_iniciar
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_iniciar
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_leds_iniciar
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_iniciar
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_aleatorios_iniciar
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
 </UL>
-<P><STRONG><a name="[16]"></a>rt_FIFO_encolar</STRONG> (ARM, 164 bytes, Stack size 24 bytes, rt_fifo.o(i.rt_FIFO_encolar))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = rt_FIFO_encolar &rArr; drv_tiempo_actual_us &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[16]"></a>rt_FIFO_encolar</STRONG> (ARM, 216 bytes, Stack size 32 bytes, rt_fifo.o(i.rt_FIFO_encolar))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = rt_FIFO_encolar &rArr; drv_tiempo_actual_us &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
-<P><STRONG><a name="[6d]"></a>rt_FIFO_extraer</STRONG> (ARM, 160 bytes, Stack size 40 bytes, rt_fifo.o(i.rt_FIFO_extraer))
+<P><STRONG><a name="[6e]"></a>rt_FIFO_extraer</STRONG> (ARM, 172 bytes, Stack size 40 bytes, rt_fifo.o(i.rt_FIFO_extraer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = rt_FIFO_extraer &rArr; drv_SC_entrar_disable_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
 </UL>
 
-<P><STRONG><a name="[69]"></a>rt_FIFO_inicializar</STRONG> (ARM, 40 bytes, Stack size 0 bytes, rt_fifo.o(i.rt_FIFO_inicializar))
+<P><STRONG><a name="[6a]"></a>rt_FIFO_inicializar</STRONG> (ARM, 48 bytes, Stack size 0 bytes, rt_fifo.o(i.rt_FIFO_inicializar))
 <BR><BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -674,58 +676,60 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_dormir
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_ge.o(i.rt_GE_iniciar)
 </UL>
-<P><STRONG><a name="[6a]"></a>rt_GE_iniciar</STRONG> (ARM, 164 bytes, Stack size 8 bytes, rt_ge.o(i.rt_GE_iniciar))
+<P><STRONG><a name="[6b]"></a>rt_GE_iniciar</STRONG> (ARM, 164 bytes, Stack size 8 bytes, rt_ge.o(i.rt_GE_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rt_GE_iniciar &rArr; rt_GE_suscribir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_iniciar
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_iniciar
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>rt_GE_lanzador</STRONG> (ARM, 180 bytes, Stack size 16 bytes, rt_ge.o(i.rt_GE_lanzador))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = rt_GE_lanzador &rArr; svc_alarma_activar
+<P><STRONG><a name="[6d]"></a>rt_GE_lanzador</STRONG> (ARM, 344 bytes, Stack size 32 bytes, rt_ge.o(i.rt_GE_lanzador))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = rt_GE_lanzador &rArr; svc_alarma_activar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_alimentar
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_WDT_alimentar
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_codificar
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_salir_enable_irq
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_SC_entrar_disable_irq
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_FIFO_extraer
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_consumo_esperar
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_actual_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[41]"></a>rt_GE_suscribir</STRONG> (ARM, 140 bytes, Stack size 24 bytes, rt_ge.o(i.rt_GE_suscribir))
+<P><STRONG><a name="[42]"></a>rt_GE_suscribir</STRONG> (ARM, 140 bytes, Stack size 24 bytes, rt_ge.o(i.rt_GE_suscribir))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = rt_GE_suscribir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_iniciar
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_iniciar
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_iniciar
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
 </UL>
 
-<P><STRONG><a name="[37]"></a>svc_alarma_activar</STRONG> (ARM, 712 bytes, Stack size 72 bytes, svc_alarmas.o(i.svc_alarma_activar))
+<P><STRONG><a name="[37]"></a>svc_alarma_activar</STRONG> (ARM, 792 bytes, Stack size 72 bytes, svc_alarmas.o(i.svc_alarma_activar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = svc_alarma_activar
 </UL>
-<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_monitor_marcar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reiniciar_variables_juego
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalizar_partida
 <LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_actualizar
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_actualizar
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
 </UL>
 
-<P><STRONG><a name="[18]"></a>svc_alarma_actualizar</STRONG> (ARM, 152 bytes, Stack size 32 bytes, svc_alarmas.o(i.svc_alarma_actualizar))
+<P><STRONG><a name="[18]"></a>svc_alarma_actualizar</STRONG> (ARM, 176 bytes, Stack size 32 bytes, svc_alarmas.o(i.svc_alarma_actualizar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svc_alarma_actualizar
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> svc_alarmas.o(i.svc_alarma_iniciar)
@@ -734,63 +738,63 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
 <LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_actualizar
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_botones_actualizar
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_lanzador
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
 </UL>
 
-<P><STRONG><a name="[6b]"></a>svc_alarma_iniciar</STRONG> (ARM, 84 bytes, Stack size 8 bytes, svc_alarmas.o(i.svc_alarma_iniciar))
+<P><STRONG><a name="[6c]"></a>svc_alarma_iniciar</STRONG> (ARM, 92 bytes, Stack size 8 bytes, svc_alarmas.o(i.svc_alarma_iniciar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svc_alarma_iniciar &rArr; rt_GE_suscribir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_periodico_ms
+<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_GE_suscribir
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_tiempo_periodico_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3f]"></a>__aeabi_f2uiz</STRONG> (ARM, 0 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu))
+<P><STRONG><a name="[40]"></a>__aeabi_f2uiz</STRONG> (ARM, 0 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2uiz
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
 </UL>
 
-<P><STRONG><a name="[6e]"></a>_ffixu</STRONG> (ARM, 84 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<P><STRONG><a name="[6f]"></a>_ffixu</STRONG> (ARM, 84 bytes, Stack size 16 bytes, ffixu.o(x$fpl$ffixu), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
 
-<P><STRONG><a name="[a3]"></a>__aeabi_i2f</STRONG> (ARM, 0 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
+<P><STRONG><a name="[a4]"></a>__aeabi_i2f</STRONG> (ARM, 0 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
 
-<P><STRONG><a name="[a4]"></a>_fflt</STRONG> (ARM, 92 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
+<P><STRONG><a name="[a5]"></a>_fflt</STRONG> (ARM, 92 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
 
-<P><STRONG><a name="[71]"></a>__fflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ffltu
+<P><STRONG><a name="[72]"></a>__fflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ffltu
 </UL>
 
-<P><STRONG><a name="[3d]"></a>__aeabi_ui2f</STRONG> (ARM, 0 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$ffltu))
+<P><STRONG><a name="[3e]"></a>__aeabi_ui2f</STRONG> (ARM, 0 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$ffltu))
 <BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
 </UL>
 
-<P><STRONG><a name="[70]"></a>_ffltu</STRONG> (ARM, 8 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$ffltu), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fflt_normalise
+<P><STRONG><a name="[71]"></a>_ffltu</STRONG> (ARM, 8 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$ffltu), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fflt_normalise
 </UL>
 
-<P><STRONG><a name="[3e]"></a>__aeabi_fmul</STRONG> (ARM, 0 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul))
+<P><STRONG><a name="[3f]"></a>__aeabi_fmul</STRONG> (ARM, 0 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
 </UL>
 
-<P><STRONG><a name="[72]"></a>_fmul</STRONG> (ARM, 256 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<P><STRONG><a name="[73]"></a>_fmul</STRONG> (ARM, 256 bytes, Stack size 16 bytes, fmul.o(x$fpl$fmul), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
 </UL>
 
-<P><STRONG><a name="[6f]"></a>__fpl_fnaninf</STRONG> (ARM, 168 bytes, Stack size 8 bytes, fnaninf.o(x$fpl$fnaninf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fmul
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ffixu
+<P><STRONG><a name="[70]"></a>__fpl_fnaninf</STRONG> (ARM, 168 bytes, Stack size 8 bytes, fnaninf.o(x$fpl$fnaninf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fmul
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ffixu
 </UL>
 
-<P><STRONG><a name="[73]"></a>__fpl_fretinf</STRONG> (ARM, 16 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fmul
+<P><STRONG><a name="[74]"></a>__fpl_fretinf</STRONG> (ARM, 16 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fmul
 </UL>
 <P>
 <H3>
@@ -799,17 +803,27 @@ Local Symbols
 <P><STRONG><a name="[f]"></a>drv_cb</STRONG> (ARM, 36 bytes, Stack size 8 bytes, drv_botones.o(i.drv_cb))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = drv_cb
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_deshabilitar
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_ext_int_deshabilitar
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> drv_botones.o(i.drv_botones_iniciar)
 </UL>
-<P><STRONG><a name="[39]"></a>finalizar_partida</STRONG> (ARM, 156 bytes, Stack size 16 bytes, beat_hero.o(i.finalizar_partida))
+<P><STRONG><a name="[3a]"></a>finalizar_partida</STRONG> (ARM, 168 bytes, Stack size 16 bytes, beat_hero.o(i.finalizar_partida))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = finalizar_partida &rArr; svc_alarma_activar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
+</UL>
+
+<P><STRONG><a name="[38]"></a>reiniciar_variables_juego</STRONG> (ARM, 180 bytes, Stack size 8 bytes, beat_hero.o(i.reiniciar_variables_juego))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = reiniciar_variables_juego &rArr; svc_alarma_activar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svc_alarma_activar
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drv_led_establecer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_actualizar
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beat_hero_iniciar
 </UL>
 
 <P><STRONG><a name="[13]"></a>EINT0_IRQHandler</STRONG> (ARM, 68 bytes, Stack size 32 bytes, hal_ext_int_lpc.o(i.EINT0_IRQHandler))

@@ -39,33 +39,36 @@ C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\main.c(86): warning:  #1-D: l
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\main.c(21): warning:  #177-D: variable "btn_states"  was declared but never referenced
   static bool btn_states[BUTTONS_NUMBER] = {false};
 ..\..\src\main.c: 5 warnings, 0 errors
-compiling drv_tiempo.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_tiempo.c(106): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_tiempo.c: 1 warning, 0 errors
-compiling drv_botones.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_botones.c(63): warning:  #513-D: a value of type "void (*)(uint32_t, uint32_t)" cannot be assigned to an entity of type "f_callback_GE"
-      drv_botones_isr_callback = funcion_callback_app; 
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_botones.c(157): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_botones.c: 2 warnings, 0 errors
 compiling app_jugar.c...
 compiling drv_monitor.c...
+compiling drv_leds.c...
+compiling drv_WDT.c...
 compiling rt_fifo.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\rt_fifo.c(98): warning:  #1-D: last line of file ends without a newline
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\rt_fifo.c(129): warning:  #1-D: last line of file ends without a newline
   }
 ..\..\src\rt_fifo.c: 1 warning, 0 errors
 compiling drv_consumo.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
   extern void switch_to_PLL();
 ..\..\src\drv_consumo.c: 1 warning, 0 errors
-compiling drv_WDT.c...
+compiling rt_GE.c...
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\rt_GE.c(169): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\src\rt_GE.c: 1 warning, 0 errors
+compiling drv_botones.c...
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_botones.c(63): warning:  #513-D: a value of type "void (*)(uint32_t, uint32_t)" cannot be assigned to an entity of type "f_callback_GE"
+      drv_botones_isr_callback = funcion_callback_app; 
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_botones.c(157): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\src\drv_botones.c: 2 warnings, 0 errors
+compiling drv_tiempo.c...
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_tiempo.c(106): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\src\drv_tiempo.c: 1 warning, 0 errors
 compiling svc_alarmas.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\svc_alarmas.c(145): warning:  #1-D: last line of file ends without a newline
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\svc_alarmas.c(164): warning:  #1-D: last line of file ends without a newline
   }
 ..\..\src\svc_alarmas.c: 1 warning, 0 errors
-compiling drv_leds.c...
-compiling rt_GE.c...
 compiling drv_aleatorios.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
   #endif /* DRV_ALEATORIOS_H */
@@ -74,7 +77,19 @@ C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_aleatorios.h(29): warning
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_aleatorios.c(17): warning:  #1-D: last line of file ends without a newline
   }
 ..\..\src\drv_aleatorios.c: 3 warnings, 0 errors
+compiling drv_sonido.c...
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif /* DRV_SONIDO_H */
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_sonido.c(30): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\src\drv_sonido.c: 2 warnings, 0 errors
 compiling drv_SC.c...
+compiling hal_SC.c...
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_SC.c(12): warning:  #940-D: missing return statement at end of non-void function "deshabilitar_irq" 
+  }
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_SC.c(6): warning:  #177-D: variable "m_in_critical_region"  was declared but never referenced
+  static uint32_t m_in_critical_region = 0;
+..\..\src\hal_SC.c: 2 warnings, 0 errors
 compiling beat_hero.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\beat_hero.h(26): warning:  #1-D: last line of file ends without a newline
   #endif /* BEAT_HERO_H */
@@ -82,21 +97,10 @@ C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_aleatorios.h(29): warning
   #endif /* DRV_ALEATORIOS_H */
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
   #endif /* DRV_SONIDO_H */
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\beat_hero.c(247): warning:  #1-D: last line of file ends without a newline
+C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\beat_hero.c(315): warning:  #1-D: last line of file ends without a newline
   }
 ..\..\src\beat_hero.c: 4 warnings, 0 errors
-compiling drv_sonido.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_SONIDO_H */
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_sonido.c(30): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_sonido.c: 2 warnings, 0 errors
-compiling hal_SC.c...
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_SC.c(12): warning:  #940-D: missing return statement at end of non-void function "deshabilitar_irq" 
-  }
-C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_SC.c(6): warning:  #177-D: variable "m_in_critical_region"  was declared but never referenced
-  static uint32_t m_in_critical_region = 0;
-..\..\src\hal_SC.c: 2 warnings, 0 errors
+compiling hal_gpio_lpc.c...
 compiling test.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\test.c(385): warning:  #550-D: variable "estado"  was set but never used
       uint32_t estado;
@@ -107,26 +111,25 @@ C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\test.c(40): warning:  #550-D:
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\test.c(43): warning:  #550-D: variable "test_alarma_vencida"  was set but never used
   static bool test_alarma_vencida = false;
 ..\..\src\test.c: 4 warnings, 0 errors
+compiling hal_tiempo_lpc.c...
 compiling hal_consumo_lpc.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
   extern void switch_to_PLL();
 ..\src_lpc\hal_consumo_lpc.c: 1 warning, 0 errors
-compiling hal_gpio_lpc.c...
-compiling hal_tiempo_lpc.c...
-compiling hal_WDT_lpc.c...
 compiling hal_ext_int_lpc.c...
+compiling hal_WDT_lpc.c...
+assembling Startup.s...
+compiling hal_sonido_lpc.c...
 compiling hal_aleatorios_lpc.c...
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
   #endif /* DRV_ALEATORIOS_H */
 C:\proyectos\EsteSi\blink_v2_lpc_resuelto-main\lpc\src_lpc\hal_aleatorios_lpc.c(41): warning:  #1-D: last line of file ends without a newline
   }
 ..\src_lpc\hal_aleatorios_lpc.c: 2 warnings, 0 errors
-compiling hal_sonido_lpc.c...
-assembling Startup.s...
 linking...
-Program Size: Code=9780 RO-data=80 RW-data=120 ZI-data=3552  
-".\Objects\blink_lpc.axf" - 0 Error(s), 29 Warning(s).
-Build Time Elapsed:  00:00:03
+Program Size: Code=10312 RO-data=80 RW-data=128 ZI-data=3640  
+".\Objects\blink_lpc.axf" - 0 Error(s), 30 Warning(s).
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

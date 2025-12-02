@@ -9,6 +9,9 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+// Activa el modo debug (asegúrate de que esto esté descomentado)
+#define DEBUG 
+
 #define TAMCOLA 32
 typedef uint32_t indice_cola_t;
 
@@ -22,7 +25,14 @@ typedef struct {
 
 static bool s_iniciado = false;
 static RT_FIFO s_rt_fifo;
-static uint32_t estadisticas[EVENT_TYPES];
+
+#ifdef DEBUG
+// --- VARIABLES GLOBALES DE DEPURACIÓN (Sin static, con volatile) ---
+volatile uint32_t dbg_fifo_stats[EVENT_TYPES + 1]; 
+volatile uint32_t dbg_fifo_uso_actual = 0;
+volatile uint32_t dbg_fifo_uso_max = 0; 
+volatile uint32_t dbg_fifo_total_encolados = 0;
+#endif
 
 void rt_FIFO_inicializar(uint32_t monitor_overflow){
   s_rt_fifo.ultimo_tratado = 0;
@@ -30,6 +40,11 @@ void rt_FIFO_inicializar(uint32_t monitor_overflow){
   s_rt_fifo.monitor=monitor_overflow;
   s_rt_fifo.eventos_a_tratar=0;
   s_iniciado = true;
+  
+  #ifdef DEBUG
+  dbg_fifo_uso_actual = 0;
+  dbg_fifo_uso_max = 0;
+  #endif
 }
 
 void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
@@ -45,6 +60,21 @@ void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
 
   s_rt_fifo.eventos_a_tratar++;
   
+  #ifdef DEBUG
+  // Actualizar estadísticas 
+  dbg_fifo_uso_actual = s_rt_fifo.eventos_a_tratar;
+  if (dbg_fifo_uso_actual > dbg_fifo_uso_max) {
+      dbg_fifo_uso_max = dbg_fifo_uso_actual;
+  }
+  dbg_fifo_total_encolados++;
+  
+  if (ID_evento < EVENT_TYPES) {
+      dbg_fifo_stats[ID_evento]++;
+  } else {
+      dbg_fifo_stats[EVENT_TYPES]++; 
+  }
+  #endif
+  
   if (s_rt_fifo.eventos_a_tratar > TAMCOLA) 
   {
     drv_monitor_marcar(s_rt_fifo.monitor);
@@ -54,12 +84,6 @@ void rt_FIFO_encolar(uint32_t ID_evento, uint32_t auxData){
   
   uint32_t indice = (s_rt_fifo.siguiente_a_tratar + s_rt_fifo.eventos_a_tratar - 1) % TAMCOLA;
   s_rt_fifo.cola[indice] = ev;
-  
-  if (ev.ID_EVENTO < EVENT_TYPES) {
-      estadisticas[ev.ID_EVENTO]++;
-  } else {
-      estadisticas[ev_VOID]++;
-  }
 
   // --- SECCIÓN CRÍTICA: FIN ---
   drv_SC_salir_enable_irq(); 
@@ -81,6 +105,10 @@ uint8_t rt_FIFO_extraer(EVENTO_T *ID_evento, uint32_t *auxData, Tiempo_us_t *TS)
 
   s_rt_fifo.eventos_a_tratar--;
   
+  #ifdef DEBUG
+  dbg_fifo_uso_actual = s_rt_fifo.eventos_a_tratar;
+  #endif
+  
   uint8_t ret = s_rt_fifo.eventos_a_tratar == 0 ? 1 : s_rt_fifo.eventos_a_tratar;
 
   // --- SECCIÓN CRÍTICA: FIN ---
@@ -94,5 +122,8 @@ uint8_t rt_FIFO_extraer(EVENTO_T *ID_evento, uint32_t *auxData, Tiempo_us_t *TS)
 }
 
 uint32_t rt_FIFO_estadisticas(EVENTO_T ID_evento){
-  return estadisticas[ID_evento];
+  #ifdef DEBUG
+  if (ID_evento < EVENT_TYPES) return dbg_fifo_stats[ID_evento];
+  #endif
+  return 0;
 }

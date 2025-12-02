@@ -8,6 +8,8 @@
 #include "rt_fifo.h"
 #include "rt_GE.h" 
 
+#define DEBUG
+
 #define svc_ALARMAS_MAX 8 
 #define tiempo_periodico 1
 
@@ -29,6 +31,12 @@ static void (*m_cb_a_llamar)(uint32_t, uint32_t);
 static EVENTO_T m_ev_a_notificar;
 static uint32_t g_M_overflow_monitor_id;
 
+#ifdef DEBUG
+// --- VARIABLES GLOBALES DE DEPURACIÓN (Sin static, con volatile) ---
+volatile uint32_t dbg_alarmas_activas = 0;
+volatile uint32_t dbg_alarmas_max_uso = 0;
+#endif
+
 static inline uint32_t decodificar_retardo(uint32_t flags) {
     return flags & MASK_RETARDO;
 }
@@ -37,11 +45,6 @@ static inline bool decodificar_periodica(uint32_t flags) {
     return (flags & MASK_PERIODICA) != 0;
 }
 
-/**
- * @brief CORREGIDO: Busca alarma por Evento Y por datos Auxiliares.
- * Esto permite tener múltiples alarmas del mismo tipo (ev_BOTON_TIMER)
- * pero para distintos botones (ID 0, ID 1, etc).
- */
 static Alarma_t* buscar_alarma(EVENTO_T ID_evento, uint32_t auxData) {
     for (int i = 0; i < svc_ALARMAS_MAX; i++) {
         if (m_alarmas[i].activa && 
@@ -71,6 +74,11 @@ void svc_alarma_iniciar(uint32_t monitor_overflow, void(*funcion_callback_app)(u
         m_alarmas[i].activa = false;
     }
     
+    #ifdef DEBUG
+    dbg_alarmas_activas = 0;
+    dbg_alarmas_max_uso = 0;
+    #endif
+
     rt_GE_suscribir(m_ev_a_notificar, 0, svc_alarma_actualizar);
     drv_tiempo_periodico_ms(tiempo_periodico, m_cb_a_llamar, m_ev_a_notificar);
 }
@@ -87,13 +95,15 @@ uint32_t svc_alarma_codificar(bool periodico, uint32_t retardo_ms, uint8_t flags
 
 void svc_alarma_activar(uint32_t alarma_flags, EVENTO_T ID_evento, uint32_t auxData) {
     
-    // Buscamos alarma coincidiendo ID y Aux (para no machacar la de otro botón)
     Alarma_t* alarma = buscar_alarma(ID_evento, auxData);
     
     // Caso 1: Desprogramar
     if (alarma_flags == 0) {
         if (alarma != NULL) {
             alarma->activa = false;
+            #ifdef DEBUG
+            if (dbg_alarmas_activas > 0) dbg_alarmas_activas--;
+            #endif
         }
         return;
     }
@@ -107,6 +117,13 @@ void svc_alarma_activar(uint32_t alarma_flags, EVENTO_T ID_evento, uint32_t auxD
             }
             while(1);
         }
+        // Nueva alarma ocupada
+        #ifdef DEBUG
+        dbg_alarmas_activas++;
+        if (dbg_alarmas_activas > dbg_alarmas_max_uso) {
+            dbg_alarmas_max_uso = dbg_alarmas_activas;
+        }
+        #endif
     }
     
     alarma->activa = true;
@@ -114,7 +131,7 @@ void svc_alarma_activar(uint32_t alarma_flags, EVENTO_T ID_evento, uint32_t auxD
     alarma->retardo_ms = decodificar_retardo(alarma_flags);
     alarma->contador = alarma->retardo_ms; 
     alarma->ID_evento = ID_evento;
-    alarma->auxData = auxData; // Guardamos el ID del botón aquí
+    alarma->auxData = auxData; 
 }
 
 void svc_alarma_actualizar(EVENTO_T evento, uint32_t aux) { 
@@ -130,7 +147,6 @@ void svc_alarma_actualizar(EVENTO_T evento, uint32_t aux) {
             
             if (m_alarmas[i].contador == 0) {
                 if (m_cb_a_llamar) { 
-                    // Encolamos el evento recuperando su auxData original (el ID del botón)
                     m_cb_a_llamar(m_alarmas[i].ID_evento, m_alarmas[i].auxData);
                 }
                 
@@ -138,6 +154,9 @@ void svc_alarma_actualizar(EVENTO_T evento, uint32_t aux) {
                     m_alarmas[i].contador = m_alarmas[i].retardo_ms;
                 } else {
                     m_alarmas[i].activa = false;
+                    #ifdef DEBUG
+                    if (dbg_alarmas_activas > 0) dbg_alarmas_activas--;
+                    #endif
                 }
             }
         }
