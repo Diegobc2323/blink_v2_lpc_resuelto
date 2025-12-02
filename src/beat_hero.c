@@ -21,35 +21,38 @@
 #define TIEMPO_REINICIO_MS      3000
 
 // IDs Mágicos para alarmas (en auxData)
-// IMPORTANTE: ID 999 puede causar desbordamiento en algunos RTOS (uint8_t), 
-// cambiamos a 50 para asegurar estabilidad en el reinicio.
 #define ID_ALARMA_RESET         50  
 #define ID_ALARMA_TICK          100
 #define ID_ALARMA_DEMO          200
 
 // --- ESTRUCTURA DE ESTADÍSTICAS (Para Watch1 en Keil) ---
 typedef struct {
-    int32_t  Score;                   // Puntuación actual (sincronizada)
+    int32_t  Score;                   // Puntuación actual
     int32_t  HighScore;               // Récord de sesión
     uint8_t  Nivel;                   // Nivel actual (1-4)
     uint32_t CompasActual;            // Progreso de la canción
     
     // Métricas de Rendimiento
     uint32_t NotasAcertadas;
-    uint32_t NotasFalladas;           // Fallos de botón o notas pasadas
-    uint32_t ComboActual;             // Racha actual
-    uint32_t MaxCombo;                // Mejor racha de la partida
+    uint32_t NotasFalladas;           
+    uint32_t ComboActual;             
+    uint32_t MaxCombo;                
     
-    // Métricas de Tiempo (Latencia humana)
-    int32_t  UltimoTiempoReaccion_ms; // Tiempo desde inicio compás hasta pulsar
-    int32_t  PromedioReaccion_ms;     // Promedio de tiempo de reacción
-    uint64_t SumaTiemposReaccion;     // Auxiliar para cálculo de promedio
+    // --- NUEVOS CAMPOS DE PRECISIÓN ---
+    uint32_t AciertosPerfectos;       // <= 10% (2 puntos)
+    uint32_t AciertosBuenos;          // <= 20% (1 punto)
+    uint32_t AciertosNormales;        // <= 40% (0 puntos)
+    
+    // Métricas de Tiempo
+    int32_t  UltimoTiempoReaccion_ms; 
+    int32_t  PromedioReaccion_ms;     
+    uint64_t SumaTiemposReaccion;     
 } BeatHeroStats_t;
 
-// Variable global volatile para que el debugger la lea siempre
+// Variable global volatile para debugging
 volatile BeatHeroStats_t juego_stats = {0};
 
-// Variables de Estado Originales
+// Variables de Estado
 static uint8_t compas[3]; 
 typedef enum { e_INIT, e_JUEGO, e_RESULTADO } GameState_t;
 static GameState_t s_estado = e_INIT;
@@ -84,7 +87,6 @@ void beat_hero_iniciar(void) {
     rt_GE_suscribir(ev_JUEGO_TIMEOUT, 1, beat_hero_actualizar); 
     
     reiniciar_variables_juego(); 
-    // Iniciar parpadeo attract mode (ID_ALARMA_DEMO)
     svc_alarma_activar(svc_alarma_codificar(false, 500, ID_ALARMA_DEMO), ev_JUEGO_NUEVO_LED, ID_ALARMA_DEMO);
 }
 
@@ -140,20 +142,16 @@ void beat_hero_actualizar(EVENTO_T evento, uint32_t auxData) {
                 avanzar_compas();
                 actualizar_leds_display();
                 
-                // Dificultad
                 if (s_compases_jugados % 5 == 0 && s_compases_jugados > 0) {
                     s_nivel_dificultad++;
                     if(s_nivel_dificultad > 4) s_nivel_dificultad = 4;
                     if (s_nivel_dificultad == 4) s_duracion_compas_ms = (uint32_t)(s_duracion_compas_ms * 0.9f);
                     
-                    // STATS: Actualizar nivel
                     juego_stats.Nivel = s_nivel_dificultad;
                 }
 
                 s_tiempo_inicio_compas = drv_tiempo_actual_us();
                 s_compases_jugados++; 
-                
-                // STATS: Actualizar compás
                 juego_stats.CompasActual = s_compases_jugados;
 
                 programar_siguiente_tick();
@@ -169,54 +167,64 @@ void beat_hero_actualizar(EVENTO_T evento, uint32_t auxData) {
 
         case e_RESULTADO:
             if (evento == ev_PULSAR_BOTON && (auxData == 2 || auxData == 3)) {
-                // Cancelamos cualquier alarma previa de reset para evitar duplicados
                 svc_alarma_activar(0, ev_JUEGO_TIMEOUT, ID_ALARMA_RESET);
-                
                 uint32_t flags = svc_alarma_codificar(false, TIEMPO_REINICIO_MS, ID_ALARMA_RESET);
                 svc_alarma_activar(flags, ev_JUEGO_TIMEOUT, ID_ALARMA_RESET);
             }
             
             if (evento == ev_SOLTAR_BOTON && (auxData == 2 || auxData == 3)) {
-                // Si suelta el botón antes de tiempo, cancelamos el reset
                 svc_alarma_activar(0, ev_JUEGO_TIMEOUT, ID_ALARMA_RESET);
             }
             
             if (evento == ev_JUEGO_TIMEOUT && auxData == ID_ALARMA_RESET) {
-                // Se cumplieron los 3 segundos
                 reiniciar_variables_juego();
                 s_estado = e_INIT;
                 svc_alarma_activar(svc_alarma_codificar(false, 500, ID_ALARMA_DEMO), ev_JUEGO_NUEVO_LED, ID_ALARMA_DEMO);
             }
+            break;
+            
+        default: break;
+    }
+}
+
+// ESTA FUNCIÓN FALTABA (Por eso el error L6218E)
+static void finalizar_partida(bool exito) {
+    s_estado = e_RESULTADO;
+    // Cancelar tick de juego pendiente
+    svc_alarma_activar(0, ev_JUEGO_NUEVO_LED, ID_ALARMA_TICK);
+    
+    // Apagar todo primero
+    for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_OFF);
+    
+    if (exito) {
+        // Victoria: Todo ON
+        for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_ON);
         if (s_score > s_high_score) {
             s_high_score = s_score;
-            juego_stats.HighScore = s_high_score;
+            juego_stats.HighScore = s_high_score; // Actualizamos también en el struct
         }
     } else {
+        // Derrota: 1 y 4 ON
         drv_led_establecer(1, LED_ON);
         drv_led_establecer(4, LED_ON);
     }
 }
 
 static void reiniciar_variables_juego(void) {
-    // Guardamos HighScore para no perderlo al limpiar
     int32_t saved_high = juego_stats.HighScore;
     
-    // 1. Limpieza total de la estructura
+    // 1. Limpieza total
     memset((void*)&juego_stats, 0, sizeof(BeatHeroStats_t));
     
-    // 2. Restauramos HighScore
+    // 2. Restaurar HighScore y valores iniciales
     juego_stats.HighScore = saved_high;
-    
-    // 3. Forzamos explícitamente a 0 las variables solicitadas (redundante con memset pero seguro)
-    juego_stats.Score = 0;
-    juego_stats.NotasAcertadas = 0;
-    juego_stats.NotasFalladas = 0;
-    juego_stats.UltimoTiempoReaccion_ms = 0;
-    juego_stats.PromedioReaccion_ms = 0;
-    juego_stats.SumaTiemposReaccion = 0;
-    
-    // 4. Reinicio variables de control
     juego_stats.Nivel = 1;
+    
+    // 3. Resetear contadores de aciertos explícitamente (aunque memset ya lo hizo)
+    juego_stats.AciertosPerfectos = 0;
+    juego_stats.AciertosBuenos = 0;
+    juego_stats.AciertosNormales = 0;
+
     s_score = 0; 
     s_compases_jugados = 0; 
     s_nivel_dificultad = 1; 
@@ -224,13 +232,10 @@ static void reiniciar_variables_juego(void) {
     compas[0]=0; compas[1]=0; compas[2]=0;
     
     for(int i=1; i<=LEDS_NUMBER; i++) drv_led_establecer(i, LED_OFF);
-    
-    // Cancelamos alarma de reset por si acaso quedó pendiente
     svc_alarma_activar(0, ev_JUEGO_TIMEOUT, ID_ALARMA_RESET);
 }
 
 static void avanzar_compas(void) {
-    // STATS: Detectar nota perdida (Miss)
     if (compas[0] != 0) {
         juego_stats.NotasFalladas++;
         juego_stats.ComboActual = 0;
@@ -259,23 +264,30 @@ static void programar_siguiente_tick(void) {
 
 static int calcular_puntuacion(Tiempo_us_t now) {
     uint32_t diff_ms = (uint32_t)((now - s_tiempo_inicio_compas) / 1000);
-    
-    // STATS: Guardar latencia actual
     juego_stats.UltimoTiempoReaccion_ms = diff_ms;
     
     if(s_duracion_compas_ms == 0) return 0;
     uint32_t pct = (diff_ms * 100) / s_duracion_compas_ms;
-    if (pct <= 10) return 2;
-    if (pct <= 20) return 1;
-    if (pct <= 40) return 0;
+    
+    // --- LÓGICA DE ACIERTOS ACTUALIZADA ---
+    if (pct <= 10) { 
+        juego_stats.AciertosPerfectos++; // 10%
+        return 2; 
+    }
+    if (pct <= 20) { 
+        juego_stats.AciertosBuenos++;    // 20%
+        return 1; 
+    }
+    if (pct <= 40) { 
+        juego_stats.AciertosNormales++;  // 40%
+        return 0; 
+    }
     return -1;
 }
 
 static void evaluar_jugada(uint8_t input_mask) {
     if (compas[0] == 0) { 
-        // Error: Pulsar sin nota
         s_score--; 
-        
         juego_stats.Score = s_score;
         juego_stats.NotasFalladas++;
         juego_stats.ComboActual = 0;
@@ -283,7 +295,6 @@ static void evaluar_jugada(uint8_t input_mask) {
     }
     
     if (compas[0] & input_mask) {
-        // Acierto
         s_score += calcular_puntuacion(drv_tiempo_actual_us());
         compas[0] &= ~input_mask; 
         
@@ -294,16 +305,13 @@ static void evaluar_jugada(uint8_t input_mask) {
             juego_stats.MaxCombo = juego_stats.ComboActual;
         }
         
-        // STATS: Promedio acumulativo
         juego_stats.SumaTiemposReaccion += juego_stats.UltimoTiempoReaccion_ms;
         if(juego_stats.NotasAcertadas > 0) {
             juego_stats.PromedioReaccion_ms = (int32_t)(juego_stats.SumaTiemposReaccion / juego_stats.NotasAcertadas);
         }
 
     } else {
-        // Error: Botón incorrecto
         s_score--;
-        
         juego_stats.Score = s_score;
         juego_stats.NotasFalladas++;
         juego_stats.ComboActual = 0;

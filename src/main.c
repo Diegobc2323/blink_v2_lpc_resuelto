@@ -50,14 +50,14 @@ int main(void){
     // 1. Inicializaciones de Hardware básico
     drv_tiempo_iniciar(); 
     hal_gpio_iniciar(); 
+	  drv_consumo_iniciar(4); 
     drv_monitor_iniciar();
 		drv_sonido_iniciar();
-    drv_consumo_iniciar(0); 
     drv_leds_iniciar();
   
     // 2. Inicializaciones del Sistema (Runtime)
     // IMPORTANTE: rt_GE_iniciar DEBE ir antes de cualquier driver que use suscripciones
-    rt_FIFO_inicializar(2); // Monitor ID 2
+    rt_FIFO_inicializar(1); // Monitor ID 2
     rt_GE_iniciar(3);       // Monitor ID 3 <--- MOVIDO AQUÍ
     
     // 3. Inicializaciones de Servicios y Drivers (que usan rt_GE)
