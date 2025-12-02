@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "rt_evento_t.h": "c",
+        "drv_monitor.h": "c"
+    }
+}

@@ -1,0 +1,16 @@
+.\objects\rt_ge.o: ..\..\src\rt_GE.c
+.\objects\rt_ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\rt_ge.o: ../../src/rt_GE.h
+.\objects\rt_ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\rt_ge.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\rt_ge.o: ../../src/rt_evento_t.h
+.\objects\rt_ge.o: ../../src/drv_tiempo.h
+.\objects\rt_ge.o: ..\..\src\svc_alarmas.h
+.\objects\rt_ge.o: ..\..\src\drv_consumo.h
+.\objects\rt_ge.o: ..\..\src\rt_fifo.h
+.\objects\rt_ge.o: ..\..\src\drv_monitor.h
+.\objects\rt_ge.o: ..\..\src\drv_botones.h
+.\objects\rt_ge.o: ..\..\src\hal_gpio.h
+.\objects\rt_ge.o: ..\..\src\hal_ext_int.h
+.\objects\rt_ge.o: ..\..\src\drv_SC.h
+.\objects\rt_ge.o: ..\..\src\drv_WDT.h

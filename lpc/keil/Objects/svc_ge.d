@@ -1,0 +1,10 @@
+.\objects\svc_ge.o: ..\..\src\svc_GE.c
+.\objects\svc_ge.o: C:\Programas-Practicas\Simuladores\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\svc_ge.o: ../../src/rt_GE.h
+.\objects\svc_ge.o: C:\Programas-Practicas\Simuladores\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\svc_ge.o: C:\Programas-Practicas\Simuladores\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\svc_ge.o: ../../src/rt_evento_t.h
+.\objects\svc_ge.o: ../../src/drv_tiempo.h
+.\objects\svc_ge.o: ../../src/svc_GE.h
+.\objects\svc_ge.o: ../../src/drv_monitor.h
+.\objects\svc_ge.o: ..\..\src\svc_alarmas.h
