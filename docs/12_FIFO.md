@@ -13,17 +13,17 @@ La cola FIFO (`rt_fifo`) implementa una **cola circular thread-safe** para almac
 
 ```mermaid
 graph LR
-    subgraph "Productores (Múltiples)"
+    subgraph Productores
         ISR1[ISR Botón]
         ISR2[ISR Timer]
         DRV[Drivers]
     end
     
-    subgraph "Cola FIFO (Circular)"
-        FIFO[Buffer [32]<br/>siguiente_a_tratar → último_tratado]
+    subgraph Cola_FIFO
+        FIFO[Buffer 32<br/>siguiente -> ultimo]
     end
     
-    subgraph "Consumidor (Único)"
+    subgraph Consumidor
         GE[rt_GE_lanzador<br/>Event Loop]
     end
     
