@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.26.2.0
 Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Diego Jorge Berenguer Celma, unizar, LIC=----
+License Information: Daniel dblasco, HP Inc., LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.26.2.0
@@ -21,130 +21,67 @@ Target DLL:      Segger\JL2CM3.dll V2.99.31.0
 Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\keil\blink_nrf.uvprojx
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\nrf\keil\blink_nrf.uvprojx
 Project File Date:  12/03/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild Project 'blink_nrf' - Target 'nRF_RELEASE'
-compiling rt_fifo.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\rt_fifo.c(126): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\rt_fifo.c: 1 warning, 0 errors
-compiling drv_leds.c...
-compiling drv_WDT.c...
-compiling drv_sonido.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_SONIDO_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_sonido.c(30): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_sonido.c: 2 warnings, 0 errors
+compiling main.c...
+compiling drv_tiempo.c...
 compiling drv_monitor.c...
+compiling drv_botones.c...
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\src\drv_botones.c(63): warning:  #513-D: a value of type "void (*)(uint32_t, uint32_t)" cannot be assigned to an entity of type "f_callback_GE"
+      drv_botones_isr_callback = funcion_callback_app; 
+..\..\src\drv_botones.c: 1 warning, 0 errors
+compiling svc_alarmas.c...
+compiling rt_fifo.c...
 compiling drv_consumo.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
   extern void switch_to_PLL();
 ..\..\src\drv_consumo.c: 1 warning, 0 errors
-compiling drv_SC.c...
+compiling drv_WDT.c...
+compiling drv_leds.c...
 compiling app_jugar.c...
-compiling hal_SC.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\hal_SC.c(12): warning:  #940-D: missing return statement at end of non-void function "deshabilitar_irq" 
-  }
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\hal_SC.c(6): warning:  #177-D: variable "m_in_critical_region"  was declared but never referenced
-  static uint32_t m_in_critical_region = 0;
-..\..\src\hal_SC.c: 2 warnings, 0 errors
-compiling main.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_ALEATORIOS_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\beat_hero.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif /* BEAT_HERO_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_SONIDO_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\main.c(49): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\main.c: 4 warnings, 0 errors
-compiling svc_alarmas.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\svc_alarmas.c(163): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\svc_alarmas.c: 1 warning, 0 errors
-compiling drv_aleatorios.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_ALEATORIOS_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\hal_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_ALEATORIOS_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_aleatorios.c(17): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_aleatorios.c: 3 warnings, 0 errors
-compiling drv_tiempo.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_tiempo.c(106): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_tiempo.c: 1 warning, 0 errors
-compiling drv_botones.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_botones.c(63): warning:  #513-D: a value of type "void (*)(uint32_t, uint32_t)" cannot be assigned to an entity of type "f_callback_GE"
-      drv_botones_isr_callback = funcion_callback_app; 
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_botones.c(157): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\drv_botones.c: 2 warnings, 0 errors
 compiling rt_GE.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\rt_GE.c(168): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\rt_GE.c: 1 warning, 0 errors
-compiling test.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\test.c(214): warning:  #1-D: last line of file ends without a newline
-  }
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\test.c(22): warning:  #550-D: variable "test_ultimo_evento"  was set but never used
-  static uint32_t test_ultimo_evento = 0;
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\test.c(25): warning:  #550-D: variable "test_alarma_vencida"  was set but never used
-  static bool test_alarma_vencida = false;
-..\..\src\test.c: 3 warnings, 0 errors
+compiling drv_aleatorios.c...
+compiling drv_sonido.c...
 compiling beat_hero.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\beat_hero.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif /* BEAT_HERO_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_ALEATORIOS_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_sonido.h(23): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_SONIDO_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\beat_hero.c(317): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\src\beat_hero.c: 4 warnings, 0 errors
+compiling drv_SC.c...
+compiling hal_SC.c...
+compiling test.c...
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\src\test.c(22): warning:  #550-D: variable "test_ultimo_evento"  was set but never used
+  static uint32_t test_ultimo_evento = 0;
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\src\test.c(25): warning:  #550-D: variable "test_alarma_vencida"  was set but never used
+  static bool test_alarma_vencida = false;
+..\..\src\test.c: 2 warnings, 0 errors
 assembling arm_startup_nrf52840.s...
-compiling hal_sonido_nrf.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\src_nrf\hal_sonido_nrf.c(70): warning:  #223-D: function "nrf_delay_ms" declared implicitly
-      nrf_delay_ms(duracion_ms);
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\src_nrf\hal_sonido_nrf.c(77): warning:  #159-D: declaration is incompatible with previous "nrf_delay_ms"  (declared at line 70)
-  void nrf_delay_ms(uint32_t ms) {
-..\src_nrf\hal_sonido_nrf.c: 2 warnings, 0 errors
-compiling hal_aleatorios_nrf.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\drv_aleatorios.h(29): warning:  #1-D: last line of file ends without a newline
-  #endif /* DRV_ALEATORIOS_H */
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\src_nrf\hal_aleatorios_nrf.c(72): warning:  #1-D: last line of file ends without a newline
-  }
-..\src_nrf\hal_aleatorios_nrf.c: 2 warnings, 0 errors
-compiling hal_gpio_nrf.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\src_nrf\hal_gpio_nrf.c(52): warning:  #1-D: last line of file ends without a newline
-  }
-..\src_nrf\hal_gpio_nrf.c: 1 warning, 0 errors
 compiling hal_tiempo_nrf.c...
-compiling hal_ext_int_nrf.c...
-compiling hal_WDT_nrf.c...
+compiling hal_gpio_nrf.c...
 compiling hal_consumo_nrf.c...
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\src\hal_consumo.h(10): warning:  #1295-D: Deprecated declaration switch_to_PLL - give arg types
   extern void switch_to_PLL();
-C:\Users\propietario\Desktop\Diego\Ingenieria_Informatica\3er_year\Proyecto Hardware\Final Final\blink_v2_lpc_resuelto\nrf\keil\hal_consumo_nrf.c(100): warning:  #1-D: last line of file ends without a newline
+hal_consumo_nrf.c: 1 warning, 0 errors
+compiling hal_WDT_nrf.c...
+compiling hal_aleatorios_nrf.c...
+compiling hal_sonido_nrf.c...
+compiling hal_ext_int_nrf.c...
+C:\Users\dblas\OneDrive\Documentos\GitHub\blink_v2_lpc_resuelto\nrf\src_nrf\hal_ext_int_nrf.c(94): warning:  #1-D: last line of file ends without a newline
   }
-hal_consumo_nrf.c: 2 warnings, 0 errors
+..\src_nrf\hal_ext_int_nrf.c: 1 warning, 0 errors
 compiling system_nrf52.c...
 linking...
-Program Size: Code=5636 RO-data=608 RW-data=108 ZI-data=17452  
+Program Size: Code=5716 RO-data=612 RW-data=108 ZI-data=17452  
 FromELF: creating hex file...
-".\Objects\blink_nrf.axf" - 0 Error(s), 32 Warning(s).
+".\Objects\blink_nrf.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
-                ARM.CMSIS.5.4.0
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.1.2
+   * Component: CORE Version: 5.3.0
 
 Package Vendor: NordicSemiconductor
                 http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/NordicSemiconductor.nRF_DeviceFamilyPack.8.44.1.pack
@@ -154,19 +91,19 @@ Package Vendor: NordicSemiconductor
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_nRF_RELEASE
-  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include
   C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.44.1\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.1.2
+   * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: NordicSemiconductor::Device:Startup:8.44.1
-      Source file:   Device\Source\arm\arm_startup_nrf52840.s
-      Source file:   Device\Source\system_nrf52.c
-      Include file:  Device\Include\system_nrf52840.h
       Include file:  Device\Include\system_nrf.h
-Build Time Elapsed:  00:00:02
+      Source file:   Device\Source\system_nrf52.c
+      Source file:   Device\Source\arm\arm_startup_nrf52840.s
+      Include file:  Device\Include\system_nrf52840.h
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

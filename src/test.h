@@ -157,3 +157,4 @@ void test_callback_alarma(EVENTO_T evento, uint32_t auxData);
 void test_callback_botones_simultaneos(EVENTO_T evento, uint32_t id_boton);
 
 #endif /* TEST_H */
+

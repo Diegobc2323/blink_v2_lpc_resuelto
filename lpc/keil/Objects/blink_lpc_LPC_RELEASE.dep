@@ -1,5 +1,5 @@
-Dependencies for Project 'blink_lpc', Target 'LPC_DEBUG': (DO NOT MODIFY !)
-F (..\..\src\main.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+Dependencies for Project 'blink_lpc', Target 'LPC_RELEASE': (DO NOT MODIFY !)
+F (..\..\src\main.c)(0x692F8603)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (..\..\src\hal_gpio.h)(0x692F0758)
@@ -22,7 +22,7 @@ I (..\..\src\drv_aleatorios.h)(0x692F8194)
 I (..\..\src\beat_hero.h)(0x692F8194)
 I (..\..\src\drv_sonido.h)(0x692F8194)
 I (..\..\src\test.h)(0x692F8194)
-F (..\..\src\drv_leds.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_leds.o --omf_browse .\objects\drv_leds.crf --depend .\objects\drv_leds.d)
+F (..\..\src\drv_leds.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_leds.o --omf_browse .\objects\drv_leds.crf --depend .\objects\drv_leds.d)
 I (..\..\src\hal_gpio.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\drv_leds.h)(0x692F0758)
@@ -32,7 +32,7 @@ I (../src_lpc/board_lpc.h)(0x692F0757)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
 F (..\..\src\drv_leds.h)(0x692F0758)()
-F (..\..\src\drv_tiempo.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_tiempo.o --omf_browse .\objects\drv_tiempo.crf --depend .\objects\drv_tiempo.d)
+F (..\..\src\drv_tiempo.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_tiempo.o --omf_browse .\objects\drv_tiempo.crf --depend .\objects\drv_tiempo.d)
 I (..\..\src\drv_tiempo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
@@ -42,7 +42,7 @@ F (..\..\src\drv_tiempo.h)(0x692F0758)()
 F (..\..\src\hal_gpio.h)(0x692F0758)()
 F (..\..\src\hal_tiempo.h)(0x692F0758)()
 F (..\..\src\board.h)(0x692F0758)()
-F (..\..\src\drv_consumo.c)(0x692F7FB5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_consumo.o --omf_browse .\objects\drv_consumo.crf --depend .\objects\drv_consumo.d)
+F (..\..\src\drv_consumo.c)(0x692F7FB5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_consumo.o --omf_browse .\objects\drv_consumo.crf --depend .\objects\drv_consumo.d)
 I (..\..\src\drv_consumo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
@@ -51,7 +51,7 @@ I (..\..\src\hal_consumo.h)(0x692F0758)
 I (..\..\src\drv_monitor.h)(0x692F7FB5)
 F (..\..\src\drv_consumo.h)(0x692F0758)()
 F (..\..\src\hal_consumo.h)(0x692F0758)()
-F (..\..\src\drv_monitor.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_monitor.o --omf_browse .\objects\drv_monitor.crf --depend .\objects\drv_monitor.d)
+F (..\..\src\drv_monitor.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_monitor.o --omf_browse .\objects\drv_monitor.crf --depend .\objects\drv_monitor.d)
 I (..\..\src\hal_gpio.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\drv_monitor.h)(0x692F7FB5)
@@ -61,7 +61,7 @@ I (../src_lpc/board_lpc.h)(0x692F0757)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
 F (..\..\src\drv_monitor.h)(0x692F7FB5)()
-F (..\..\src\rt_fifo.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\rt_fifo.o --omf_browse .\objects\rt_fifo.crf --depend .\objects\rt_fifo.d)
+F (..\..\src\rt_fifo.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\rt_fifo.o --omf_browse .\objects\rt_fifo.crf --depend .\objects\rt_fifo.d)
 I (..\..\src\drv_consumo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
@@ -73,7 +73,7 @@ I (..\..\src\drv_tiempo.h)(0x692F0758)
 I (..\..\src\drv_SC.h)(0x692F0758)
 F (..\..\src\rt_fifo.h)(0x692F7FB5)()
 F (..\..\src\rt_evento_t.h)(0x692F0758)()
-F (..\..\src\drv_botones.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_botones.o --omf_browse .\objects\drv_botones.crf --depend .\objects\drv_botones.d)
+F (..\..\src\drv_botones.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_botones.o --omf_browse .\objects\drv_botones.crf --depend .\objects\drv_botones.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
@@ -92,7 +92,7 @@ I (..\..\src\rt_GE.h)(0x692F7FB5)
 F (..\..\src\drv_botones.h)(0x692F0758)()
 F (..\..\src\hal_ext_int.h)(0x692F0758)()
 F (..\..\src\hal_WDT.h)(0x692F0758)()
-F (..\..\src\rt_GE.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\rt_ge.o --omf_browse .\objects\rt_ge.crf --depend .\objects\rt_ge.d)
+F (..\..\src\rt_GE.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\rt_ge.o --omf_browse .\objects\rt_ge.crf --depend .\objects\rt_ge.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (../../src/rt_GE.h)(0x692F7FB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
@@ -109,7 +109,7 @@ I (..\..\src\hal_ext_int.h)(0x692F0758)
 I (..\..\src\drv_SC.h)(0x692F0758)
 I (..\..\src\drv_WDT.h)(0x692F0758)
 F (..\..\src\rt_GE.h)(0x692F7FB5)()
-F (..\..\src\svc_alarmas.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\svc_alarmas.o --omf_browse .\objects\svc_alarmas.crf --depend .\objects\svc_alarmas.d)
+F (..\..\src\svc_alarmas.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\svc_alarmas.o --omf_browse .\objects\svc_alarmas.crf --depend .\objects\svc_alarmas.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
@@ -120,7 +120,7 @@ I (..\..\src\svc_alarmas.h)(0x692F0758)
 I (..\..\src\rt_fifo.h)(0x692F7FB5)
 I (..\..\src\rt_GE.h)(0x692F7FB5)
 F (..\..\src\svc_alarmas.h)(0x692F0758)()
-F (..\..\src\app_jugar.c)(0x692F7FB5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\app_jugar.o --omf_browse .\objects\app_jugar.crf --depend .\objects\app_jugar.d)
+F (..\..\src\app_jugar.c)(0x692F7FB5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\app_jugar.o --omf_browse .\objects\app_jugar.crf --depend .\objects\app_jugar.d)
 I (..\..\src\app_jugar.h)(0x692F0758)
 I (..\..\src\rt_evento_t.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
@@ -139,19 +139,19 @@ I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
 F (..\..\src\app_jugar.h)(0x692F0758)()
 F (..\..\src\drv_WDT.h)(0x692F0758)()
-F (..\..\src\drv_WDT.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_wdt.o --omf_browse .\objects\drv_wdt.crf --depend .\objects\drv_wdt.d)
+F (..\..\src\drv_WDT.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_wdt.o --omf_browse .\objects\drv_wdt.crf --depend .\objects\drv_wdt.d)
 I (..\..\src\drv_WDT.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\hal_WDT.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
 F (..\..\src\beat_hero.h)(0x692F8194)()
-F (..\..\src\drv_aleatorios.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_aleatorios.o --omf_browse .\objects\drv_aleatorios.crf --depend .\objects\drv_aleatorios.d)
+F (..\..\src\drv_aleatorios.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_aleatorios.o --omf_browse .\objects\drv_aleatorios.crf --depend .\objects\drv_aleatorios.d)
 I (..\..\src\drv_aleatorios.h)(0x692F8194)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\hal_aleatorios.h)(0x692F8194)
 F (..\..\src\drv_aleatorios.h)(0x692F8194)()
-F (..\..\src\beat_hero.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
+F (..\..\src\beat_hero.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\beat_hero.o --omf_browse .\objects\beat_hero.crf --depend .\objects\beat_hero.d)
 I (..\..\src\beat_hero.h)(0x692F8194)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\rt_evento_t.h)(0x692F0758)
@@ -174,11 +174,11 @@ I (..\..\src\hal_ext_int.h)(0x692F0758)
 I (..\..\src\drv_aleatorios.h)(0x692F8194)
 I (..\..\src\drv_sonido.h)(0x692F8194)
 F (..\..\src\drv_sonido.h)(0x692F8194)()
-F (..\..\src\drv_sonido.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_sonido.o --omf_browse .\objects\drv_sonido.crf --depend .\objects\drv_sonido.d)
+F (..\..\src\drv_sonido.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_sonido.o --omf_browse .\objects\drv_sonido.crf --depend .\objects\drv_sonido.d)
 I (..\..\src\drv_sonido.h)(0x692F8194)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (..\..\src\hal_sonido.h)(0x692F0758)
-F (..\..\src\drv_SC.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\drv_sc.o --omf_browse .\objects\drv_sc.crf --depend .\objects\drv_sc.d)
+F (..\..\src\drv_SC.c)(0x692F0758)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\drv_sc.o --omf_browse .\objects\drv_sc.crf --depend .\objects\drv_sc.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
@@ -186,13 +186,13 @@ I (..\..\src\drv_SC.h)(0x692F0758)
 I (..\..\src\hal_SC.h)(0x692F826F)
 F (..\..\src\drv_SC.h)(0x692F0758)()
 F (..\..\src\hal_aleatorios.h)(0x692F8194)()
-F (..\..\src\hal_SC.c)(0x692F826F)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_sc.o --omf_browse .\objects\hal_sc.crf --depend .\objects\hal_sc.d)
+F (..\..\src\hal_SC.c)(0x692F826F)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_sc.o --omf_browse .\objects\hal_sc.crf --depend .\objects\hal_sc.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
 I (..\..\src\hal_SC.h)(0x692F826F)
 F (..\..\src\hal_SC.h)(0x692F826F)()
-F (..\..\src\test.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\test.o --omf_browse .\objects\test.crf --depend .\objects\test.d)
+F (..\..\src\test.c)(0x692F8194)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\test.o --omf_browse .\objects\test.crf --depend .\objects\test.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (..\..\src\board.h)(0x692F0758)
@@ -215,23 +215,23 @@ I (..\..\src\drv_leds.h)(0x692F0758)
 F (..\..\src\test.h)(0x692F8194)()
 F (..\..\src\hal_sonido.h)(0x692F0758)()
 F (..\src_lpc\board_lpc.h)(0x692F0757)()
-F (..\src_lpc\hal_gpio_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_gpio_lpc.o --omf_browse .\objects\hal_gpio_lpc.crf --depend .\objects\hal_gpio_lpc.d)
+F (..\src_lpc\hal_gpio_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_gpio_lpc.o --omf_browse .\objects\hal_gpio_lpc.crf --depend .\objects\hal_gpio_lpc.d)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../../src/hal_gpio.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
-F (..\src_lpc\hal_tiempo_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_tiempo_lpc.o --omf_browse .\objects\hal_tiempo_lpc.crf --depend .\objects\hal_tiempo_lpc.d)
+F (..\src_lpc\hal_tiempo_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_tiempo_lpc.o --omf_browse .\objects\hal_tiempo_lpc.crf --depend .\objects\hal_tiempo_lpc.d)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (../../src/hal_tiempo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F3DAC)
 F (..\src_lpc\reserva_gpio_lpc2105.h)(0x692F0757)()
-F (..\src_lpc\hal_consumo_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_consumo_lpc.o --omf_browse .\objects\hal_consumo_lpc.crf --depend .\objects\hal_consumo_lpc.d)
+F (..\src_lpc\hal_consumo_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_consumo_lpc.o --omf_browse .\objects\hal_consumo_lpc.crf --depend .\objects\hal_consumo_lpc.d)
 I (../../src/hal_consumo.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\INC\Philips\LPC21xx.H)(0x559D3D78)
-F (..\src_lpc\hal_ext_int_lpc.c)(0x692F7FB5)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_ext_int_lpc.o --omf_browse .\objects\hal_ext_int_lpc.crf --depend .\objects\hal_ext_int_lpc.d)
+F (..\src_lpc\hal_ext_int_lpc.c)(0x692F86ED)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_ext_int_lpc.o --omf_browse .\objects\hal_ext_int_lpc.crf --depend .\objects\hal_ext_int_lpc.d)
 I (C:\Keil_v5\ARM\INC\Philips\LPC210x.H)(0x559D3D78)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (../../src/hal_ext_int.h)(0x692F0758)
@@ -239,17 +239,17 @@ I (../../src/hal_gpio.h)(0x692F0758)
 I (../../src/board.h)(0x692F0758)
 I (../src_lpc/board_lpc.h)(0x692F0757)
 I (../src_lpc/reserva_gpio_lpc2105.h)(0x692F0757)
-F (..\src_lpc\hal_WDT_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_wdt_lpc.o --omf_browse .\objects\hal_wdt_lpc.crf --depend .\objects\hal_wdt_lpc.d)
+F (..\src_lpc\hal_WDT_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_wdt_lpc.o --omf_browse .\objects\hal_wdt_lpc.crf --depend .\objects\hal_wdt_lpc.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F3DAC)
 I (C:\Keil_v5\ARM\INC\Philips\lpc21xx.h)(0x559D3D78)
 I (../../src/hal_WDT.h)(0x692F0758)
-F (..\src_lpc\hal_aleatorios_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_aleatorios_lpc.o --omf_browse .\objects\hal_aleatorios_lpc.crf --depend .\objects\hal_aleatorios_lpc.d)
+F (..\src_lpc\hal_aleatorios_lpc.c)(0x692F82A4)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_aleatorios_lpc.o --omf_browse .\objects\hal_aleatorios_lpc.crf --depend .\objects\hal_aleatorios_lpc.d)
 I (../../src/drv_aleatorios.h)(0x692F8194)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F3DAC)
-F (..\src_lpc\hal_sonido_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DDEBUG -DLPC2105_simulador-o .\objects\hal_sonido_lpc.o --omf_browse .\objects\hal_sonido_lpc.crf --depend .\objects\hal_sonido_lpc.d)
+F (..\src_lpc\hal_sonido_lpc.c)(0x692F0757)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I ../../src -I ../src_lpc-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="526" -DLPC2105_simulador-o .\objects\hal_sonido_lpc.o --omf_browse .\objects\hal_sonido_lpc.crf --depend .\objects\hal_sonido_lpc.d)
 I (../../src/hal_sonido.h)(0x692F0758)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
 F (..\src_lpc\Startup.s)(0x692F0757)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 526"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
