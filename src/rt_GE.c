@@ -12,7 +12,6 @@
 #include "rt_GE.h"
 #include "drv_tiempo.h" 
 
-#define DEBUG
 
 #define sec 1
 #define prioridad_alta 0

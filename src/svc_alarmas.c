@@ -8,7 +8,6 @@
 #include "rt_fifo.h"
 #include "rt_GE.h" 
 
-#define DEBUG
 
 #define svc_ALARMAS_MAX 8 
 #define tiempo_periodico 1

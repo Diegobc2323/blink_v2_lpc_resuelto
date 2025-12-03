@@ -9,9 +9,6 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-// Activa el modo debug (asegúrate de que esto esté descomentado)
-#define DEBUG 
-
 #define TAMCOLA 32
 typedef uint32_t indice_cola_t;
 
