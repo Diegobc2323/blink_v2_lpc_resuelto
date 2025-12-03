@@ -11,32 +11,34 @@
 #include "hal_gpio.h"
 #include "hal_ext_int.h"
 
-#define TRP_MS 80  
-#define TEP_MS 50  
-#define TRD_MS 50  
+// Tiempos para el filtrado de rebotes (Debounce)
+#define TRP_MS 80   // Tiempo Rebote Pulsado: Espera inicial tras detectar flanco
+#define TEP_MS 50   // Tiempo Entre Pulsaciones: Periodo de muestreo para detectar soltado
+#define TRD_MS 50   // Tiempo Rebote Despulsado: Espera final antes de rehabilitar IRQ
 
 #define NUM_BOTONES BUTTONS_NUMBER
 
+// Eventos que usaremos para notificar a la aplicacion
 static EVENTO_T m_ev_confirmado; 
 static EVENTO_T m_ev_soltado;    
 static EVENTO_T m_ev_retardo;    
 
+// Estados de la Maquina de Estados (FSM) de cada boton
 typedef enum {
-    e_esperando,
-    e_rebotes,
-    e_muestreo,
-    e_salida
+    e_esperando,  // IRQ habilitada, esperando pulsacion
+    e_rebotes,    // Esperando a que pasen los rebotes mecanicos iniciales
+    e_muestreo,   // Boton validado como pulsado, comprobando periodicamente si se suelta
+    e_salida      // Boton soltado, esperando tiempo de seguridad antes de rehabilitar IRQ
 } FsmEstado_t;
 
+// Estado individual para cada boton
 static volatile FsmEstado_t s_estado_botones[BUTTONS_NUMBER];
 
+// Mapeo de pines hardware
 static const HAL_GPIO_PIN_T s_pins_botones[BUTTONS_NUMBER] = {
     BUTTON_1,
-
     BUTTON_2,
-
     BUTTON_3,
-
 #if BUTTONS_NUMBER > 3
     BUTTON_4
 #endif
@@ -44,14 +46,13 @@ static const HAL_GPIO_PIN_T s_pins_botones[BUTTONS_NUMBER] = {
 
 static f_callback_GE drv_botones_isr_callback;
 
-// --- CORRECCIÓN IMPORTANTE AQUÍ ---
+// Callback que se ejecuta desde la ISR (Interrupcion Hardware)
 static void drv_cb(uint8_t id_boton) {
-    // 1. Deshabilitamos la interrupción INMEDIATAMENTE al detectar el flanco.
-    // Esto evita que los rebotes físicos sigan disparando esta función y
-    // llenen la cola de eventos, lo que causaba el reinicio (Watchdog/Overflow).
+    // deshabilitamos interrupcion para que los rebotes no disparen la ISR constantemente
     hal_ext_int_deshabilitar(id_boton);
 
-    // 2. Notificamos al gestor de eventos
+    // Notificamos al gestor de eventos que ha ocurrido algo
+    // La logica real se procesara en drv_botones_actualizar (nivel usuario)
     drv_botones_isr_callback(ev_PULSAR_BOTON, id_boton);
 }
 
@@ -65,31 +66,35 @@ void drv_botones_iniciar (void(*funcion_callback_app)(uint32_t, uint32_t),
     m_ev_soltado = ev_soltar;     
     m_ev_retardo = ev_tiempo;    
     
+    // Inicializar estados
     for (int i = 0; i < NUM_BOTONES; i++) {
         s_estado_botones[i] = e_esperando;
     }
     
-    // Suscribimos la FSM a los eventos necesarios
+    // Suscribir la FSM a los eventos del sistema
+    // ev_pulsar: viene de la ISR (inicio de pulsacion)
+    // ev_tiempo: viene de las alarmas (timeouts de rebotes)
     rt_GE_suscribir(ev_pulsar, 0, drv_botones_actualizar);
     rt_GE_suscribir(ev_tiempo, 0, drv_botones_actualizar);
 
+    // Configurar hardware
     hal_ext_int_iniciar(drv_cb);
     for (int i = 0; i < NUM_BOTONES; i++) {
         hal_ext_int_habilitar(i);
     }
 }
 
+// Maquina de Estados Principal
 void drv_botones_actualizar (EVENTO_T evento, uint32_t auxiliar){
     
     uint8_t button_id = (uint8_t)auxiliar; 
     if (button_id >= NUM_BOTONES) return; 
 
+    // Caso 1: Evento de pulsacion inicial (desde ISR)
     if (evento == ev_PULSAR_BOTON) {
         if (s_estado_botones[button_id] == e_esperando) {
-            // NOTA: Ya no llamamos a hal_ext_int_deshabilitar aquí
-            // porque ya lo hicimos en la ISR (drv_cb) para protegernos.
-            
-            // Alarma rebotes (TRP)
+            // La IRQ ya se deshabilito en la ISR.
+            // Programamos alarma para esperar a que la señal se estabilice (TRP)
             uint32_t m_alarma_flags_trp = svc_alarma_codificar(false, TRP_MS, button_id);
             svc_alarma_activar(m_alarma_flags_trp, m_ev_retardo, button_id);
             
@@ -98,27 +103,29 @@ void drv_botones_actualizar (EVENTO_T evento, uint32_t auxiliar){
         return; 
     }
     
+    // Caso 2: Eventos de temporizacion (timeouts de alarmas)
     switch (s_estado_botones[button_id]) {
         
         case e_rebotes: 
-            // Comprobamos si sigue pulsado tras el tiempo de rebote
-            // (Asumiendo activo a nivel bajo 0)
+            // Ha pasado el tiempo de rebote inicial.
+            // Leemos el pin para ver si sigue pulsado (Nivel Bajo = Activo)
             if (hal_gpio_leer(s_pins_botones[button_id]) == 0) { 
                 
-                // Confirmamos pulsación real
+                // Confirmado: Es una pulsacion real y estable
                 drv_botones_isr_callback(m_ev_confirmado, button_id); 
                 
-                // Pasamos a muestreo periódico para detectar cuándo se suelta
+                // Pasamos a modo muestreo periodico para detectar cuando se suelta
                 uint32_t m_alarma_flags_tep = svc_alarma_codificar(true, TEP_MS, button_id);
                 svc_alarma_activar(m_alarma_flags_tep, m_ev_retardo, button_id);
                 
                 s_estado_botones[button_id] = e_muestreo;
                 
             } else {
-                // Falsa alarma (ruido): el botón ya no está pulsado.
-                // IMPORTANTE: Avisar a la APP de que "soltamos" por si acaso
+                // Falsa alarma (ruido): el boton ya no esta pulsado.
+                // Avisamos que se ha soltado (por si la app esperaba algo)
                 drv_botones_isr_callback(m_ev_soltado, button_id); 
 
+                // Restauramos estado inicial
                 hal_ext_int_limpiar_pendiente(button_id);
                 hal_ext_int_habilitar(button_id);
                 s_estado_botones[button_id] = e_esperando;
@@ -126,16 +133,18 @@ void drv_botones_actualizar (EVENTO_T evento, uint32_t auxiliar){
             break;
             
         case e_muestreo: 
-            // Si devuelve != 0 es que está en ALTO (Soltado)
+            // Comprobamos periodicamente si se ha soltado
+            // Si devuelve != 0 es que esta en ALTO (Soltado)
             if (hal_gpio_leer(s_pins_botones[button_id]) != 0) { 
                 
-                // 1. Avisar soltado
+                // 1. Notificar a la app
                 drv_botones_isr_callback(m_ev_soltado, button_id);
 
-                // 2. Cancelar la alarma periódica
+                // 2. Cancelar el muestreo periodico
                 svc_alarma_activar(0, m_ev_retardo, button_id);
                 
-                // 3. Esperar un poco antes de rehabilitar IRQ (TRD)
+                // 3. Esperar tiempo de seguridad (TRD) antes de reactivar IRQ
+                // Esto evita que los rebotes al soltar disparen una nueva pulsacion
                 uint32_t m_alarma_flags_trd = svc_alarma_codificar(false, TRD_MS, button_id);
                 svc_alarma_activar(m_alarma_flags_trd, m_ev_retardo, button_id);
                 
@@ -144,6 +153,8 @@ void drv_botones_actualizar (EVENTO_T evento, uint32_t auxiliar){
             break;
             
         case e_salida: 
+            // Ha pasado el tiempo de seguridad final.
+            // Limpiamos flags pendientes y rehabilitamos la interrupcion
             hal_ext_int_limpiar_pendiente(button_id);
             hal_ext_int_habilitar(button_id);
             s_estado_botones[button_id] = e_esperando;
@@ -151,6 +162,7 @@ void drv_botones_actualizar (EVENTO_T evento, uint32_t auxiliar){
             
         case e_esperando:
         default:
+            // Recuperacion de errores
             hal_ext_int_habilitar(button_id);
             break;
     }
