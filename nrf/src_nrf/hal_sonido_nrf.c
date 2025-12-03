@@ -13,6 +13,9 @@
 // Debe estar en RAM retenida (static) para que el DMA del PWM acceda a él
 static uint16_t seq_values[1]; 
 
+
+void nrf_delay_ms(uint32_t ms);
+
 void hal_sonido_iniciar(void) {
     // 1. Configurar el pin como salida
     uint32_t port = (BUZZER_PIN >> 5) & 1;

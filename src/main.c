@@ -15,6 +15,11 @@
 #include "beat_hero.h"
 #include "drv_sonido.h"
 #include "test.h"
+#include "board.h" // Aquí sí incluimos board.h para saber los pines reales
+
+// Definición de las variables que el HAL espera encontrar 'extern'
+const uint32_t g_hal_ext_int_pines[BUTTONS_NUMBER] = BUTTONS_LIST;
+const uint8_t  g_hal_ext_int_num_pines = BUTTONS_NUMBER;
 
 volatile uint32_t testsPasados = 0;
 

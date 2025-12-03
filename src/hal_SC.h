@@ -12,9 +12,9 @@
  * Esta función anida llamadas, manteniendo las interrupciones deshabilitadas
  * hasta que la última llamada a drv_SC_salir_enable_irq se ejecute.
  *
- * @return El contador de nivel de anidamiento de la sección crítica (para depuración).
+ * 
  */
-uint32_t deshabilitar_irq(void);
+void deshabilitar_irq(void);
 
 /**
  * @brief Sale de una sección crítica y habilita las interrupciones.
