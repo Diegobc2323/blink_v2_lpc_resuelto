@@ -6,8 +6,8 @@
 #include <nrf.h>
 #include <stddef.h>
 
-// --- DEPENDENCIA EXTERNA (Definir en main.c o board.c) ---
-// El driver "confía" en que estas variables existen en otro archivo.
+
+
 extern const uint32_t g_hal_ext_int_pines[]; 
 extern const uint8_t  g_hal_ext_int_num_pines;
 
