@@ -9,12 +9,12 @@
 
   <project>
     <PathAndName>.\lpc\keil\blink_lpc.uvproj</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>.\nrf\keil\blink_nrf.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
